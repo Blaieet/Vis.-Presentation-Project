@@ -1,0 +1,11 @@
+dnspython==2.0.0
+Flask==1.1.2
+Flask-Script==2.0.6
+gunicorn==20.0.4
+Jinja2==2.11.2
+MarkupSafe==1.1.1
+WTForms==2.3.3
+psycopg2
+pandas
+altair
+vega_datasets

@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<body style="background-color: #F8F8F8 ">
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/HTTPError.css')}}">
+
+    <div class="error-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="error-text">
+                        <h1 class="error">404 Error</h1>
+                        <h4>Oops! This page could not be found!</h4>
+                        <p>Sorry but the page you are looking for does not exist, has been removed or its name changed.</p>
+                        <a href="{{ url_for('index') }}" class="btn btn-primary btn-round">Go to homepage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

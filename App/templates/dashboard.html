@@ -1,0 +1,84 @@
+
+
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+    <h1 class="display-4">Dashboard</h1>
+
+    <p class="lead">aaaa</p>
+    <p>Feel free to navigate between different kinds of graphs</p>
+    <hr class="my-4">
+    <h1>Example</h1>
+    <p>descr</p>
+<!--        <a onclick="showOpp()" class="btn btn-outline-dark">Opp</a>-->
+
+    {{ form.year }}
+    <div id="op" style="display:block" class="container">
+      <div class="charts text-center">
+        <div class="row"><div id="bestTeamYear"></div></div>
+        <!-- Placeholder for the tooltip -->
+        <div class="vg-tooltip"></div>
+      </div>
+    </div>
+
+    <hr class="my-4">
+    <h1>ex 2</h1>
+    <p>descr</p>
+    <div id="triple" style="display:block" class="container">
+      <div class="charts text-center">
+
+        <div class="row"><div id="triple-row"></div></div><hr>
+        <!-- Placeholder for the tooltip -->
+        <div class="vg-tooltip"></div>
+      </div>
+    </div>
+
+
+    <!-- Render Charts -->
+    <script type="text/javascript">
+        function render(url, div) {
+            var opt = {
+                mode: "vega-lite",
+                renderer: "svg",
+                actions: {export: true, source: false, editor: false}
+            };
+
+            vegaEmbed("#"+div, url, opt, function(error, result) {
+                // result.view is the Vega View, url is the original Vega-Lite specification
+                vegaTooltip.vegaLite(result.view, url);
+            });
+        }
+        {#parseOpp("/data/points_team_opp","points");#}
+    </script>
+
+    <script type="text/javascript">
+        function showOpp() {
+            var graph = document.getElementById("op");
+            if (graph.style.display == "none") {
+                graph.style.display = "block";
+            } else {
+                graph.style.display = "none"
+            }
+        }
+    </script>
+
+    <script>
+        let yearSelect = document.getElementById("year");
+        console.log("ASDAS");
+
+        function renderYear() {
+            console.log("aaaaa");
+
+            year = yearSelect.value
+            console.log(year);
+            render("/data/best_team/" + year, "bestTeamYear");
+        }
+
+        window.onload = renderYear();
+        yearSelect.onchange = renderYear();
+
+    </script>
+
+{% endblock %}
