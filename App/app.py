@@ -82,7 +82,7 @@ def points_team_opp(year):
         column=alt.Column('Team:O')
     ).configure_view(
         stroke='transparent'
-    )
+    ).interactive()
 
     return chart.to_json()
 

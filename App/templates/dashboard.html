@@ -65,7 +65,7 @@
     </script>
 
     <script>
-        let yearSelect = document.getElementById("year");
+        var yearSelect = document.getElementById("year");
         console.log("ASDAS");
 
         function renderYear() {
@@ -76,8 +76,8 @@
             render("/data/best_team/" + year, "bestTeamYear");
         }
 
-        window.onload = renderYear();
-        yearSelect.onchange = renderYear();
+        window.onload = renderYear;
+        yearSelect.onchange = renderYear;
 
     </script>
 
