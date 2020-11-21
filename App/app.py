@@ -47,17 +47,24 @@ def about():
     return render_template('about.html')
 
 
-@app.route("/data/best_team/<year>")
-def points_team_opp(year):
+@app.route("/data/best_team/<year>/<top>")
+def homeAdv(year,top):
     year = int(year)
-    print("ASDDDDDDDDDDD")
+    if top =="top":
+        return bestTeamPlot(year,True)
+    return bestTeamPlot(year,False)
+
+
+def bestTeamPlot(year,top):
 
     bigDf = pd.read_csv("App/Data/CumulativeSeasons.csv")
 
     dfSeason = bigDf[bigDf['season'] == str(year+2000)+"/"+str((year+1)+2000)]
 
-
-    df = dfSeason.groupby(['result', 'team_long_name']).size()['won'].sort_values(ascending=False)[:5]
+    if top:
+        df = dfSeason.groupby(['result', 'team_long_name']).size()['won'].sort_values(ascending=False)[:5]
+    else:
+        df = dfSeason.groupby(['result', 'team_long_name']).size()['won'].sort_values()[:5]
     teamList = df.index.tolist()
 
     num_players = 11
@@ -79,10 +86,52 @@ def points_team_opp(year):
         alt.Y('Total:Q', axis=alt.Axis(title='Total', grid=False)),
         alt.Tooltip(["Total:Q"]),
         color=alt.Color('Result:N'),
-        column=alt.Column('Team:O')
+        column=alt.Column('Team:O',sort=alt.EncodingSortField("Total", op='max',order='descending'))
     ).configure_view(
         stroke='transparent'
     ).interactive()
+
+    return chart.to_json()
+
+
+@app.route("/data/goalsGame")
+def goalsGame():
+
+    goals =pd.read_csv('App/Data/GoalsLeague.csv')
+
+    topleague = ['Ligue 1', '1. Bundesliga', 'Premier League', 'Eredivisie', 'LIGA BBVA', 'Serie A']
+
+    nearest = alt.selection(type='single', nearest=True, on='mouseover',
+                            fields=['season'], empty='none')
+
+    line = alt.Chart(goals).mark_line().encode(
+        x=alt.X('season', title='Season'),
+        y=alt.Y('match_goals:Q', scale=alt.Scale(domain=[2.2, 3.4]), title='Goals per game'),
+        color=alt.Color('league:N', scale=alt.Scale(domain=topleague))
+    )
+    selectors = alt.Chart(goals).mark_point().encode(
+        x='season',
+        opacity=alt.value(0),
+    ).add_selection(
+        nearest
+    )
+    goal_last = goals[goals['season'] == '2015/2016']
+
+    labels = alt.Chart(goal_last).mark_text(align='left', dx=3).encode(
+        alt.X('season'),
+        alt.Y('match_goals:Q', scale=alt.Scale(domain=[2.2, 3.4])),
+        alt.Text('league'),
+        alt.Color('league:N', legend=None, scale=alt.Scale(domain=topleague))
+    )
+    points = line.mark_point().encode(
+        opacity=alt.condition(nearest, alt.value(1), alt.value(0))
+    )
+    text = line.mark_text(align='left', dx=5, dy=-5).encode(
+        text=alt.condition(nearest, 'match_goals:Q', alt.value(' '), format='.2f')
+    )
+    rules = alt.Chart(goals).mark_rule(color='gray').encode(x='season',).transform_filter(nearest)
+
+    chart = alt.layer(line, selectors, labels, points, rules, text).properties(width=1000, height=500).interactive()
 
     return chart.to_json()
 

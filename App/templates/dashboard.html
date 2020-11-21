@@ -10,11 +10,12 @@
     <p class="lead">aaaa</p>
     <p>Feel free to navigate between different kinds of graphs</p>
     <hr class="my-4">
-    <h1>Example</h1>
-    <p>descr</p>
+    <h1>Top 5 best teams per season</h1>
+    <p>Did you ever had an argument with someone about what team was the best of the season, regardless of their trophies or the league? And the worse?</p>
 <!--        <a onclick="showOpp()" class="btn btn-outline-dark">Opp</a>-->
 
     {{ form.year }}
+    {{ form.top }}
     <div id="op" style="display:block" class="container">
       <div class="charts text-center">
         <div class="row"><div id="bestTeamYear"></div></div>
@@ -24,12 +25,13 @@
     </div>
 
     <hr class="my-4">
-    <h1>ex 2</h1>
-    <p>descr</p>
+    <h1>Which league has the most goals per game?</h1>
+    <p>I'm sure that you as a soccer fan ever wondered what's the most interesting league to watch. Well, usually, the more goals, the more fun.
+    Let's check out how many goals per game we have on each league on each season!</p>
     <div id="triple" style="display:block" class="container">
       <div class="charts text-center">
 
-        <div class="row"><div id="triple-row"></div></div><hr>
+        <div class="row"><div id="goals-game"></div></div><hr>
         <!-- Placeholder for the tooltip -->
         <div class="vg-tooltip"></div>
       </div>
@@ -50,7 +52,7 @@
                 vegaTooltip.vegaLite(result.view, url);
             });
         }
-        {#parseOpp("/data/points_team_opp","points");#}
+        render("/data/goalsGame","goals-game");
     </script>
 
     <script type="text/javascript">
@@ -66,18 +68,21 @@
 
     <script>
         var yearSelect = document.getElementById("year");
-        console.log("ASDAS");
+        var radio = document.getElementById("top");
+
 
         function renderYear() {
-            console.log("aaaaa");
+            console.log(radio.value);
 
-            year = yearSelect.value
+            year = yearSelect.value;
+            radioValue = radio.value;
             console.log(year);
-            render("/data/best_team/" + year, "bestTeamYear");
+            render("/data/best_team/" + year+"/"+radioValue, "bestTeamYear");
         }
 
         window.onload = renderYear;
         yearSelect.onchange = renderYear;
+        radio.onchange=renderYear;
 
     </script>
 
