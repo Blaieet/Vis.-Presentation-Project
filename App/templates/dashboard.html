@@ -37,6 +37,18 @@
       </div>
     </div>
 
+    <hr class="my-4">
+    <h1>Home Advantage</h1>
+    <p>You may already know, but, in soccer and a lot of other sports, playing on your field (a.k.a. being the "local team") affects a lot on your
+    performance. Don't believe me?</p>
+    <div id="triple" style="display:block" class="container">
+      <div class="charts text-center">
+        <div class="row"><div id="homeAdv"></div></div><hr>
+        <!-- Placeholder for the tooltip -->
+        <div class="vg-tooltip"></div>
+      </div>
+    </div>
+
 
     <!-- Render Charts -->
     <script type="text/javascript">
@@ -53,6 +65,7 @@
             });
         }
         render("/data/goalsGame","goals-game");
+        render("/data/homeAdv","homeAdv");
     </script>
 
     <script type="text/javascript">

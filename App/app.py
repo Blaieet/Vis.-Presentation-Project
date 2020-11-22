@@ -38,17 +38,13 @@ def error_not_found(error):
 def server_error(error):
     return render_template('error/505.html'), 500
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 @app.route('/about')
 def about():
     return render_template('about.html')
 
 
 @app.route("/data/best_team/<year>/<top>")
-def homeAdv(year,top):
+def best(year,top):
     year = int(year)
     if top =="top":
         return bestTeamPlot(year,True)
@@ -135,9 +131,26 @@ def goalsGame():
 
     return chart.to_json()
 
+@app.route("/data/homeAdv")
+def homeAdv():
+
+    adv = pd.read_csv("App/Data/homeadvantage.csv")
+
+    palette = alt.Scale(domain=['Home Team', 'Away Team'],
+                        range=["#5bc0de", "#d9534f"])
+    chart = alt.Chart(adv,height=500,width=70).mark_bar().encode(
+        y=alt.Y('points:Q', title='Average points'),
+        x=alt.X('team_flag:N', sort='-x', title=''),
+        color=alt.Color('team_flag:N', scale=palette, title='',legend=None),
+        column=alt.Column('league:N', title="",
+                          sort=alt.EncodingSortField("points", op='max', order='descending'),
+                          header=alt.Header(labelAngle=-90, labelAlign='right')),
+        tooltip=[alt.Tooltip('points:Q', format='.2f')]).configure_view(stroke='transparent').configure_axis(grid=False).interactive()
+    return chart.to_json()
+
 
 # render cars.html page
-@app.route("/dashboard")
+@app.route("/")
 def statistics():
     form = selectYear(request.form)
 
