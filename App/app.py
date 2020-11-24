@@ -5,6 +5,7 @@ from flask import make_response,redirect,request, url_for,abort,Response, render
 from werkzeug.urls import url_parse
 import altair as alt
 import pandas as pd
+import numpy as np
 from vega_datasets import data
 from flask import jsonify
 from App.forms import selectYear
@@ -28,6 +29,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
 #from App.models import
+
 
 
 @app.errorhandler(404)
@@ -77,12 +79,12 @@ def bestTeamPlot(year,top):
         df_draw.append(draw)
     best = pd.DataFrame({'Team': teamList, 'Wins': df_won, 'Losts': df_lost, 'Draw': df_draw})
 
-    chart = alt.Chart(pd.melt(best, id_vars=['Team'], var_name='Result', value_name='Total'),height=600,width=159).mark_bar().encode(
-        alt.X('Result:N', axis=alt.Axis(title="")),
+    chart = alt.Chart(pd.melt(best, id_vars=['Team'], var_name='Result', value_name='Total'),height=300,width=55).mark_bar().encode(
+        alt.X('Result:N', axis=alt.Axis(title="",labels=False)),
         alt.Y('Total:Q', axis=alt.Axis(title='Total', grid=False)),
         alt.Tooltip(["Total:Q"]),
         color=alt.Color('Result:N'),
-        column=alt.Column('Team:O',sort=alt.EncodingSortField("Total", op='max',order='descending'))
+        column=alt.Column('Team:O',sort=alt.EncodingSortField("Total", op='max',order='descending'),title="")
     ).configure_view(
         stroke='transparent'
     ).interactive()
@@ -127,7 +129,7 @@ def goalsGame():
     )
     rules = alt.Chart(goals).mark_rule(color='gray').encode(x='season',).transform_filter(nearest)
 
-    chart = alt.layer(line, selectors, labels, points, rules, text).properties(width=1000, height=500).interactive()
+    chart = alt.layer(line, selectors, labels, points, rules, text).properties(width=450, height=250).interactive()
 
     return chart.to_json()
 
@@ -138,14 +140,66 @@ def homeAdv():
 
     palette = alt.Scale(domain=['Home Team', 'Away Team'],
                         range=["#5bc0de", "#d9534f"])
-    chart = alt.Chart(adv,height=500,width=70).mark_bar().encode(
-        y=alt.Y('points:Q', title='Average points'),
-        x=alt.X('team_flag:N', sort='-x', title=''),
-        color=alt.Color('team_flag:N', scale=palette, title='',legend=None),
-        column=alt.Column('league:N', title="",
-                          sort=alt.EncodingSortField("points", op='max', order='descending'),
-                          header=alt.Header(labelAngle=-90, labelAlign='right')),
-        tooltip=[alt.Tooltip('points:Q', format='.2f')]).configure_view(stroke='transparent').configure_axis(grid=False).interactive()
+    # chart = alt.Chart(adv,height=500,width=70).mark_bar().encode(
+    #     y=alt.Y('points:Q', title='Average points'),
+    #     x=alt.X('team_flag:N', sort='-x', title=''),
+    #     color=alt.Color('team_flag:N', scale=palette, title='',legend=None),
+    #     column=alt.Column('league:N', title="",
+    #                       sort=alt.EncodingSortField("points", op='max', order='descending'),
+    #                       header=alt.Header(labelAngle=-90, labelAlign='right')),
+    #     tooltip=[alt.Tooltip('points:Q', format='.2f')]).configure_view(stroke='transparent').configure_axis(grid=False).interactive()
+
+
+    chart = alt.Chart(adv,height=500,width=1000).mark_bar().encode(
+        x=alt.X('points:Q', title='Average points'),
+        y=alt.Y('team_flag:N', sort='-y', title='', axis=alt.Axis(labels=False)),
+        color=alt.Color('team_flag:N', scale=palette, title=''),
+        row=alt.Row('league:N', title='',
+                    sort=alt.EncodingSortField("points", op='max', order='descending'),
+                    header=alt.Header(labelAngle=0, labelAlign='left')),
+        tooltip=[alt.Tooltip('points:Q', format='.2f')]
+    ).properties(
+        height=25
+    ).configure_view(
+        stroke='transparent'
+    ).configure_axis(grid=False).interactive()
+
+    return chart.to_json()
+
+
+
+@app.route("/data/points_rating/Leicester")
+def getPoints_ratingLei():
+    return points_rating("Leicester")
+
+@app.route("/data/points_rating/")
+def getPoints_rating():
+    return points_rating("")
+
+def points_rating(case):
+    if case == "Leicester":
+        points_vs_rating = pd.read_csv("App/Data/points_vs_ratingLeicester.csv")
+    else:
+        points_vs_rating = pd.read_csv("App/Data/points_vs_ratingNormal.csv")
+
+    points = alt.Chart(points_vs_rating).mark_circle(size=80, opacity=0.8,
+                                                     color='green').encode(alt.X('mean_player_rating',
+                                                                                 scale=alt.Scale(zero=False),
+                                                                                 axis=alt.Axis(
+                                                                                     title='Team mean player rating')),
+                                                                           alt.Y('points_per_game',
+                                                                                 scale=alt.Scale(zero=False),
+                                                                                 axis=alt.Axis(
+                                                                                     title='Points per game')),
+                                                                           color="team_name:N",
+                                                                           tooltip="team_name")
+
+    points = points + points.transform_regression("mean_player_rating", "points_per_game").mark_line().transform_fold(
+        ["Regression Line"],
+        as_=["Regression", ""]).encode(
+        color="Regression:N")
+
+    chart = points.interactive()
     return chart.to_json()
 
 
