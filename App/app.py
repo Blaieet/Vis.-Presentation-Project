@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 from vega_datasets import data
 from flask import jsonify
-from App.forms import selectYear
+from App.forms import selectYear, chartSelect
 
 
 ENV = "local"
@@ -79,7 +79,7 @@ def bestTeamPlot(year,top):
         df_draw.append(draw)
     best = pd.DataFrame({'Team': teamList, 'Wins': df_won, 'Losts': df_lost, 'Draw': df_draw})
 
-    chart = alt.Chart(pd.melt(best, id_vars=['Team'], var_name='Result', value_name='Total'),height=300,width=55).mark_bar().encode(
+    chart = alt.Chart(pd.melt(best, id_vars=['Team'], var_name='Result', value_name='Total'),height=400,width=165).mark_bar().encode(
         alt.X('Result:N', axis=alt.Axis(title="",labels=False)),
         alt.Y('Total:Q', axis=alt.Axis(title='Total', grid=False)),
         alt.Tooltip(["Total:Q"]),
@@ -90,6 +90,40 @@ def bestTeamPlot(year,top):
     ).interactive()
 
     return chart.to_json()
+
+@app.route("/data/messiCristiano")
+def messiCristiano():
+
+    finalDF = pd.read_csv("App/Data/messiCristiano.csv")
+
+    nearest = alt.selection(type='single', nearest=True, on='mouseover',
+                            fields=['date'], empty='none')
+
+    line = alt.Chart(finalDF, height=360, width=980).mark_line().encode(
+        x=alt.X('date', title='Year'),
+        y=alt.Y('overall_rating:Q', scale=alt.Scale(domain=[85, 95]), title='Overall Rating'),
+        color=alt.Color('player_name', title="Player"))
+
+    selectors = alt.Chart(finalDF).mark_point().encode(
+        x='date',
+        opacity=alt.value(0),
+    ).add_selection(
+        nearest
+    )
+
+    text = line.mark_text(align='left', dx=5, dy=-5).encode(
+        text=alt.condition(nearest, 'overall_rating:Q', alt.value(' '), format='.2f')
+    )
+
+    points = line.mark_point().encode(
+        opacity=alt.condition(nearest, alt.value(1), alt.value(0))
+    )
+
+    rules = alt.Chart(finalDF).mark_rule(color='gray').encode(x='date').transform_filter(nearest)
+
+    chart = (line + selectors + rules + text + points).interactive()
+    return chart.to_json()
+
 
 
 @app.route("/data/goalsGame")
@@ -129,7 +163,7 @@ def goalsGame():
     )
     rules = alt.Chart(goals).mark_rule(color='gray').encode(x='season',).transform_filter(nearest)
 
-    chart = alt.layer(line, selectors, labels, points, rules, text).properties(width=450, height=250).interactive()
+    chart = alt.layer(line, selectors, labels, points, rules, text).properties(width=1200, height=300).interactive()
 
     return chart.to_json()
 
@@ -177,12 +211,15 @@ def getPoints_rating():
     return points_rating("")
 
 def points_rating(case):
+    title =""
     if case == "Leicester":
+        title ="Premier League 2015/2016"
         points_vs_rating = pd.read_csv("App/Data/points_vs_ratingLeicester.csv")
     else:
+        title = "LIGA BBVA 2010/2011"
         points_vs_rating = pd.read_csv("App/Data/points_vs_ratingNormal.csv")
 
-    points = alt.Chart(points_vs_rating).mark_circle(size=80, opacity=0.8,
+    points = alt.Chart(points_vs_rating,height=300,width=300).mark_circle(size=80, opacity=0.8,
                                                      color='green').encode(alt.X('mean_player_rating',
                                                                                  scale=alt.Scale(zero=False),
                                                                                  axis=alt.Axis(
@@ -191,8 +228,8 @@ def points_rating(case):
                                                                                  scale=alt.Scale(zero=False),
                                                                                  axis=alt.Axis(
                                                                                      title='Points per game')),
-                                                                           color="team_name:N",
-                                                                           tooltip="team_name")
+                                                                           alt.Color("team_name:N",title="Team Name"),
+                                                                           tooltip="team_name").properties(title=title)
 
     points = points + points.transform_regression("mean_player_rating", "points_per_game").mark_line().transform_fold(
         ["Regression Line"],
@@ -207,8 +244,9 @@ def points_rating(case):
 @app.route("/")
 def statistics():
     form = selectYear(request.form)
+    selectForm = chartSelect(request.form)
 
-    return render_template("dashboard.html",form=form)
+    return render_template("dashboard.html",form=form,selectForm=selectForm)
 
 
 if __name__ == '__main__':

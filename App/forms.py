@@ -10,6 +10,9 @@ class selectYear(Form):
 
     top = SelectField('Best/Worse', choices=[('top', 'Top 5'), ('bottom', 'Bottom 5')])
 
+class chartSelect(Form):
+    chart = SelectField(choices=[("performance","Team Performance"),("shock","Soccer Shocking"),("goat","Messi v. Cristiano")])
+
 
 
 
