@@ -3,15 +3,7 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-    <style>
-        .row {
-          display: flex;
-        }
 
-        .column {
-          flex: 50%;
-        }
-    </style>
     <h1 class="display-4">Dashboard</h1>
 
     <p class="lead">Here you can find various insights about this wide database that we usually would not see if they were not showed in a graphical way.
@@ -22,33 +14,6 @@
     <p>Please select the kind of Dashboard you wish to see:</p>
     {{ selectForm.chart }}
     <div style="display: block" id="teamPerf">
-        <h1>It's a team game</h1>
-        <p>Let's mix the amount of points the teams managed to get in a whole season and the individual mean rating of each
-        and every player of those teams.</p>
-        <div class="row">
-            <div class="column">
-                <div class="container">
-                  <div class="charts text-center">
-                    <div class="row"><div id="points_avg"></div></div>
-                    <!-- Placeholder for the tooltip -->
-                    <div class="vg-tooltip"></div>
-                  </div>
-                </div>
-            </div>
-            <div class="column">
-                <div id="" style="display:block" class="container">
-                    <div class="charts text-center">
-
-                    <div class="row"><div id="pointsAvLei"></div></div>
-                    <!-- Placeholder for the tooltip -->
-                    <div class="vg-tooltip"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p>Look at the left plot. The teams with the best players are up on the classification: there's almost a perfect
-        correlation! Nevertheless, on the right we have the "Leicester Miracle Run", were a team considered "mediocre" managed
-        to win the Premier League:</p>
         <hr class="my-4">
         <h1>Top 5 best teams per season</h1>
         <p>Did you ever had an argument with someone about what team was the best of the season, regardless of their trophies or the league? And the worse?</p>
@@ -62,6 +27,29 @@
                 <div class="vg-tooltip"></div>
             </div>
         </div>
+        <h1>It's a team game</h1>
+        <p>Let's mix the amount of points the teams managed to get in a whole season and the individual mean rating of each
+        and every player of those teams.</p>
+        <p>Let's take a look on this example of the 2010/2011 Spanish league:</p>
+
+        <div class="container" style="display: flex; justify-content: center">
+          <div class="charts text-center">
+            <div class="row"><div id="points_avg"></div></div>
+            <!-- Placeholder for the tooltip -->
+            <div class="vg-tooltip"></div>
+          </div>
+        </div>
+        <p>We can see a clear correlation between how good are the players individually and their classification on the league. Now look
+        at this example of the 2015/2016 Premier League:</p>
+        <div style="display: flex; justify-content: center" class="container">
+            <div class="charts text-center">
+                <div class="row"><div id="pointsAvLei"></div></div>
+                <!-- Placeholder for the tooltip -->
+                <div class="vg-tooltip"></div>
+            </div>
+        </div>
+        <p>That was the <i>Leicester Miracle Run</i>, the heist of an undersized club from a small city in the midlands of England who was considered
+        as "mediocre" in terms of player quality that won the Premier League against all odds.</p>
     </div>
 
     <div style="display: none" id="shock">
