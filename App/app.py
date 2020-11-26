@@ -218,13 +218,13 @@ def leicester():
     df_pointCH = points_vs_rating[points_vs_rating["team_api_id"] == 8455]
 
     df_pointLC[
-        "comment"] = "All odds were againts the LC, but it ended up winning the league. Good team play, or just luck?"
+        "comment"] = "All odds were against the Leicester FC, but it ended up winning the league. Good team play, or just luck?"
     df_pointCH["comment"] = "Chelsea was one of the favorites, but it finished 10th in the league."
 
     all_but_outlier = points_vs_rating[points_vs_rating["team_api_id"] != 8197]
     all_but_outlier = points_vs_rating[points_vs_rating["team_api_id"] != 8455]
 
-    points = alt.Chart(all_but_outlier,height=300,width=500).mark_circle(size=80, opacity=0.1,
+    points = alt.Chart(all_but_outlier,height=300,width=500).mark_circle(size=80, opacity=0.3,
                                                     color='grey').encode(alt.X('mean_player_rating',
                                                                                scale=alt.Scale(zero=False),
                                                                                axis=alt.Axis(
