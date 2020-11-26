@@ -164,7 +164,7 @@ def goalsGame():
     )
     rules = alt.Chart(goals).mark_rule(color='gray').encode(x='season',).transform_filter(nearest)
 
-    chart = alt.layer(line, selectors, labels, points, rules, text).properties(width=1200, height=300).interactive()
+    chart = alt.layer(line, selectors, labels, points, rules, text).properties(width=1199, height=300).interactive()
 
     return chart.to_json()
 
