@@ -175,15 +175,6 @@ def homeAdv():
 
     palette = alt.Scale(domain=['Home Team', 'Away Team'],
                         range=["#5bc0de", "#d9534f"])
-    # chart = alt.Chart(adv,height=500,width=70).mark_bar().encode(
-    #     y=alt.Y('points:Q', title='Average points'),
-    #     x=alt.X('team_flag:N', sort='-x', title=''),
-    #     color=alt.Color('team_flag:N', scale=palette, title='',legend=None),
-    #     column=alt.Column('league:N', title="",
-    #                       sort=alt.EncodingSortField("points", op='max', order='descending'),
-    #                       header=alt.Header(labelAngle=-90, labelAlign='right')),
-    #     tooltip=[alt.Tooltip('points:Q', format='.2f')]).configure_view(stroke='transparent').configure_axis(grid=False).interactive()
-
 
     chart = alt.Chart(adv,height=500,width=1000).mark_bar().encode(
         x=alt.X('points:Q', title='Average points'),
