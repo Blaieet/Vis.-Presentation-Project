@@ -71,9 +71,9 @@ def bestTeamPlot(year,top):
     df_lost = []
     df_draw = []
     for i in df.index:
-        won = (dfSeason.groupby(['team_long_name', "result"]).size()[i][2]) / num_players
-        lost = (dfSeason.groupby(['team_long_name', "result"]).size()[i][1]) / num_players
-        draw = (dfSeason.groupby(['team_long_name', "result"]).size()[i][0]) / num_players
+        won = int((dfSeason.groupby(['team_long_name', "result"]).size()[i][2]) / num_players)
+        lost = int((dfSeason.groupby(['team_long_name', "result"]).size()[i][1]) / num_players)
+        draw = int((dfSeason.groupby(['team_long_name', "result"]).size()[i][0]) / num_players)
 
         df_won.append(won)
         df_lost.append(lost)
