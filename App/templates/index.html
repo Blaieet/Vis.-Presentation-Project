@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="jumbotron">
+        <h1 class="display-4">Presentation & Visualization projects</h1>
+        <p class="lead">Adrián Fernández, Adrián Torres i Blai Ras</p>
+        <hr class="my-4">
+        <div class="card-deck">
+            <div class="card" style="width: 18rem;">
+                <a href="/dashboard">
+                    <img class="card-img-top" src="{{url_for('static', filename='images/dashboard.jpg')}}" alt="Card image cap">
+                    <div class="card-body" style="color: black">
+                        <h5 class="card-title">Dashboard</h5>
+                        <p class="card-text">A visual display of the most important information needed to
+                            achieve one or more objectives that has been consolidated on a single screen so it can be monitored at a glance.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <a href="/storytelling">
+                    <img class="card-img-top" src="{{url_for('static', filename='images/storytelling.jpg')}}" alt="Card image cap">
+                    <div class="card-body" style="color: black">
+                        <h5 class="card-title">Storytelling</h5>
+                        <p class="card-text">A structured approach for communicating data insights, and it involves a
+                            combination of three key elements: data, visuals, and narrative.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+{% endblock %}

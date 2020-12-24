@@ -32,6 +32,14 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 #from App.models import
 
 
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+@app.route("/storytelling")
+def storytelling():
+    return render_template("storytelling.html")
+
 
 @app.errorhandler(404)
 def error_not_found(error):
@@ -293,8 +301,10 @@ def points_rating(case):
     return chart.to_json()
 
 
+
+
 # render cars.html page
-@app.route("/")
+@app.route("/dashboard")
 def statistics():
     form = selectYear(request.form)
     selectForm = chartSelect(request.form)
