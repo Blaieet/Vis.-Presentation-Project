@@ -1,0 +1,267 @@
+,country_id,country,league,season,stage,date,match_year,match_api_id,team_flag,team_api_id,team_long_name,team_short_name,team_goals,result,points,player_api_id,player_name,birthday,height,weight,cumpoints
+152893,1729,England,Premier League,2014/2015,1,2014-08-18,2014,1723983,home_team,8191,Burnley,BUR,1,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,0
+152911,1729,England,Premier League,2014/2015,2,2014-08-23,2014,1724000,away_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,0
+152894,1729,England,Premier League,2014/2015,3,2014-08-30,2014,1724003,home_team,8191,Burnley,BUR,0,draw,1,37240,Scott Arfield,1988-11-01,177.8,154,1
+152912,1729,England,Premier League,2014/2015,4,2014-09-13,2014,1724014,away_team,8191,Burnley,BUR,0,draw,1,37240,Scott Arfield,1988-11-01,177.8,154,2
+152895,1729,England,Premier League,2014/2015,5,2014-09-20,2014,1724023,home_team,8191,Burnley,BUR,0,draw,1,37240,Scott Arfield,1988-11-01,177.8,154,3
+152913,1729,England,Premier League,2014/2015,6,2014-09-28,2014,1724041,away_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,3
+152914,1729,England,Premier League,2014/2015,7,2014-10-04,2014,1724045,away_team,8191,Burnley,BUR,2,draw,1,37240,Scott Arfield,1988-11-01,177.8,154,4
+152896,1729,England,Premier League,2014/2015,8,2014-10-18,2014,1724053,home_team,8191,Burnley,BUR,1,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,4
+152897,1729,England,Premier League,2014/2015,9,2014-10-26,2014,1724062,home_team,8191,Burnley,BUR,1,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,4
+152915,1729,England,Premier League,2014/2015,10,2014-11-01,2014,1724072,away_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,4
+152898,1729,England,Premier League,2014/2015,11,2014-11-08,2014,1724082,home_team,8191,Burnley,BUR,1,won,3,37240,Scott Arfield,1988-11-01,177.8,154,7
+315341,1729,England,Premier League,2014/2015,12,2014-11-22,2014,1724101,away_team,8191,Burnley,BUR,2,won,3,34437,Dean Marney,1984-01-31,182.88,159,10
+315331,1729,England,Premier League,2014/2015,13,2014-11-29,2014,1724102,home_team,8191,Burnley,BUR,1,draw,1,34437,Dean Marney,1984-01-31,182.88,159,11
+152899,1729,England,Premier League,2014/2015,14,2014-12-02,2014,1724113,home_team,8191,Burnley,BUR,1,draw,1,37240,Scott Arfield,1988-11-01,177.8,154,12
+152916,1729,England,Premier League,2014/2015,15,2014-12-06,2014,1724127,away_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,12
+152900,1729,England,Premier League,2014/2015,16,2014-12-13,2014,1724133,home_team,8191,Burnley,BUR,1,won,3,37240,Scott Arfield,1988-11-01,177.8,154,15
+152917,1729,England,Premier League,2014/2015,17,2014-12-20,2014,1724150,away_team,8191,Burnley,BUR,1,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,15
+152901,1729,England,Premier League,2014/2015,18,2014-12-26,2014,1724153,home_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,15
+152918,1729,England,Premier League,2014/2015,19,2014-12-28,2014,1724165,away_team,8191,Burnley,BUR,2,draw,1,37240,Scott Arfield,1988-11-01,177.8,154,16
+152919,1729,England,Premier League,2014/2015,20,2015-01-01,2015,1724176,away_team,8191,Burnley,BUR,3,draw,1,37240,Scott Arfield,1988-11-01,177.8,154,17
+152902,1729,England,Premier League,2014/2015,21,2015-01-10,2015,1724183,home_team,8191,Burnley,BUR,2,won,3,37240,Scott Arfield,1988-11-01,177.8,154,20
+152903,1729,England,Premier League,2014/2015,22,2015-01-17,2015,1724193,home_team,8191,Burnley,BUR,2,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,20
+152920,1729,England,Premier League,2014/2015,23,2015-01-31,2015,1724210,away_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,20
+152904,1729,England,Premier League,2014/2015,24,2015-02-08,2015,1724213,home_team,8191,Burnley,BUR,2,draw,1,37240,Scott Arfield,1988-11-01,177.8,154,21
+152921,1729,England,Premier League,2014/2015,25,2015-02-11,2015,1724224,away_team,8191,Burnley,BUR,1,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,21
+152922,1729,England,Premier League,2014/2015,26,2015-02-21,2015,1724233,away_team,8191,Burnley,BUR,1,draw,1,37240,Scott Arfield,1988-11-01,177.8,154,22
+152905,1729,England,Premier League,2014/2015,27,2015-02-28,2015,1724243,home_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,22
+152923,1729,England,Premier League,2014/2015,28,2015-03-04,2015,1724257,away_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,22
+152906,1729,England,Premier League,2014/2015,29,2015-03-14,2015,1724263,home_team,8191,Burnley,BUR,1,won,3,37240,Scott Arfield,1988-11-01,177.8,154,25
+152924,1729,England,Premier League,2014/2015,30,2015-03-21,2015,1724278,away_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,25
+152907,1729,England,Premier League,2014/2015,31,2015-04-05,2015,1724283,home_team,8191,Burnley,BUR,0,draw,1,37240,Scott Arfield,1988-11-01,177.8,154,26
+152908,1729,England,Premier League,2014/2015,32,2015-04-11,2015,1724292,home_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,26
+152925,1729,England,Premier League,2014/2015,33,2015-04-18,2015,1724306,away_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,26
+152909,1729,England,Premier League,2014/2015,34,2015-04-25,2015,1724313,home_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,26
+152926,1729,England,Premier League,2014/2015,35,2015-05-02,2015,1724331,away_team,8191,Burnley,BUR,0,lost,0,37240,Scott Arfield,1988-11-01,177.8,154,26
+152927,1729,England,Premier League,2014/2015,36,2015-05-09,2015,1724337,away_team,8191,Burnley,BUR,1,won,3,37240,Scott Arfield,1988-11-01,177.8,154,29
+152910,1729,England,Premier League,2014/2015,37,2015-05-16,2015,1724342,home_team,8191,Burnley,BUR,0,draw,1,37240,Scott Arfield,1988-11-01,177.8,154,30
+152928,1729,England,Premier League,2014/2015,38,2015-05-24,2015,1724353,away_team,8191,Burnley,BUR,1,won,3,37240,Scott Arfield,1988-11-01,177.8,154,33
+278532,1729,England,Premier League,2014/2015,1,2014-08-16,2014,1723984,home_team,8197,Leicester City,LEI,2,draw,1,202562,Anthony Knockaert,1991-11-20,172.72,152,1
+319901,1729,England,Premier League,2014/2015,2,2014-08-23,2014,1723993,away_team,8197,Leicester City,LEI,0,lost,0,67850,Ritchie De Laet,1988-11-28,185.42,170,1
+319889,1729,England,Premier League,2014/2015,3,2014-08-31,2014,1724005,home_team,8197,Leicester City,LEI,1,draw,1,67850,Ritchie De Laet,1988-11-28,185.42,170,2
+319902,1729,England,Premier League,2014/2015,4,2014-09-13,2014,1724019,away_team,8197,Leicester City,LEI,1,won,3,67850,Ritchie De Laet,1988-11-28,185.42,170,5
+319890,1729,England,Premier League,2014/2015,5,2014-09-21,2014,1724025,home_team,8197,Leicester City,LEI,5,won,3,67850,Ritchie De Laet,1988-11-28,185.42,170,8
+319903,1729,England,Premier League,2014/2015,6,2014-09-27,2014,1724034,away_team,8197,Leicester City,LEI,0,lost,0,67850,Ritchie De Laet,1988-11-28,185.42,170,8
+319891,1729,England,Premier League,2014/2015,7,2014-10-04,2014,1724045,home_team,8197,Leicester City,LEI,2,draw,1,67850,Ritchie De Laet,1988-11-28,185.42,170,9
+319904,1729,England,Premier League,2014/2015,8,2014-10-18,2014,1724057,away_team,8197,Leicester City,LEI,0,lost,0,67850,Ritchie De Laet,1988-11-28,185.42,170,9
+319905,1729,England,Premier League,2014/2015,9,2014-10-25,2014,1724068,away_team,8197,Leicester City,LEI,0,lost,0,67850,Ritchie De Laet,1988-11-28,185.42,170,9
+273571,1729,England,Premier League,2014/2015,10,2014-11-01,2014,1724078,home_team,8197,Leicester City,LEI,0,lost,0,13423,Marcin Wasilewski,1980-06-09,185.42,194,9
+273585,1729,England,Premier League,2014/2015,11,2014-11-08,2014,1724086,away_team,8197,Leicester City,LEI,0,lost,0,13423,Marcin Wasilewski,1980-06-09,185.42,194,9
+273572,1729,England,Premier League,2014/2015,12,2014-11-22,2014,1724098,home_team,8197,Leicester City,LEI,0,draw,1,13423,Marcin Wasilewski,1980-06-09,185.42,194,10
+273586,1729,England,Premier League,2014/2015,13,2014-11-29,2014,1724105,away_team,8197,Leicester City,LEI,2,lost,0,13423,Marcin Wasilewski,1980-06-09,185.42,194,10
+273573,1729,England,Premier League,2014/2015,14,2014-12-02,2014,1724114,home_team,8197,Leicester City,LEI,1,lost,0,13423,Marcin Wasilewski,1980-06-09,185.42,194,10
+273587,1729,England,Premier League,2014/2015,15,2014-12-07,2014,1724122,away_team,8197,Leicester City,LEI,1,lost,0,13423,Marcin Wasilewski,1980-06-09,185.42,194,10
+273574,1729,England,Premier League,2014/2015,16,2014-12-13,2014,1724137,home_team,8197,Leicester City,LEI,0,lost,0,13423,Marcin Wasilewski,1980-06-09,185.42,194,10
+273588,1729,England,Premier League,2014/2015,17,2014-12-20,2014,1724151,away_team,8197,Leicester City,LEI,0,lost,0,13423,Marcin Wasilewski,1980-06-09,185.42,194,10
+273575,1729,England,Premier League,2014/2015,18,2014-12-26,2014,1724157,home_team,8197,Leicester City,LEI,1,lost,0,13423,Marcin Wasilewski,1980-06-09,185.42,194,10
+273589,1729,England,Premier League,2014/2015,19,2014-12-28,2014,1724163,away_team,8197,Leicester City,LEI,1,won,3,13423,Marcin Wasilewski,1980-06-09,185.42,194,13
+273590,1729,England,Premier League,2014/2015,20,2015-01-01,2015,1724174,away_team,8197,Leicester City,LEI,2,draw,1,13423,Marcin Wasilewski,1980-06-09,185.42,194,14
+273576,1729,England,Premier League,2014/2015,21,2015-01-10,2015,1724187,home_team,8197,Leicester City,LEI,1,won,3,13423,Marcin Wasilewski,1980-06-09,185.42,194,17
+273577,1729,England,Premier League,2014/2015,22,2015-01-17,2015,1724195,home_team,8197,Leicester City,LEI,0,lost,0,13423,Marcin Wasilewski,1980-06-09,185.42,194,17
+246656,1729,England,Premier League,2014/2015,23,2015-01-31,2015,1724207,away_team,8197,Leicester City,LEI,1,lost,0,173461,Andrej Kramaric,1991-06-19,177.8,161,17
+273578,1729,England,Premier League,2014/2015,24,2015-02-07,2015,1724215,home_team,8197,Leicester City,LEI,0,lost,0,13423,Marcin Wasilewski,1980-06-09,185.42,194,17
+246657,1729,England,Premier League,2014/2015,25,2015-02-10,2015,1724222,away_team,8197,Leicester City,LEI,1,lost,0,173461,Andrej Kramaric,1991-06-19,177.8,161,17
+246658,1729,England,Premier League,2014/2015,26,2015-02-22,2015,1724235,away_team,8197,Leicester City,LEI,2,draw,1,173461,Andrej Kramaric,1991-06-19,177.8,161,18
+273580,1729,England,Premier League,2014/2015,27,2015-04-29,2015,1724244,home_team,8197,Leicester City,LEI,1,lost,0,13423,Marcin Wasilewski,1980-06-09,185.42,194,18
+246659,1729,England,Premier League,2014/2015,28,2015-03-04,2015,1724258,away_team,8197,Leicester City,LEI,0,lost,0,173461,Andrej Kramaric,1991-06-19,177.8,161,18
+246654,1729,England,Premier League,2014/2015,29,2015-03-14,2015,1724267,home_team,8197,Leicester City,LEI,0,draw,1,173461,Andrej Kramaric,1991-06-19,177.8,161,19
+304452,1729,England,Premier League,2014/2015,30,2015-03-21,2015,1724280,away_team,8197,Leicester City,LEI,3,lost,0,23818,Matthew Upson,1979-04-18,185.42,159,19
+312780,1729,England,Premier League,2014/2015,31,2015-04-04,2015,1724287,home_team,8197,Leicester City,LEI,2,won,3,38899,Robert Huth,1984-08-18,190.5,194,22
+312808,1729,England,Premier League,2014/2015,32,2015-04-11,2015,1724300,away_team,8197,Leicester City,LEI,3,won,3,38899,Robert Huth,1984-08-18,190.5,194,25
+246655,1729,England,Premier League,2014/2015,33,2015-04-18,2015,1724308,home_team,8197,Leicester City,LEI,2,won,3,173461,Andrej Kramaric,1991-06-19,177.8,161,28
+273592,1729,England,Premier League,2014/2015,34,2015-04-25,2015,1724313,away_team,8197,Leicester City,LEI,1,won,3,13423,Marcin Wasilewski,1980-06-09,185.42,194,31
+273581,1729,England,Premier League,2014/2015,35,2015-05-02,2015,1724325,home_team,8197,Leicester City,LEI,3,won,3,13423,Marcin Wasilewski,1980-06-09,185.42,194,34
+273582,1729,England,Premier League,2014/2015,36,2015-05-09,2015,1724338,home_team,8197,Leicester City,LEI,2,won,3,13423,Marcin Wasilewski,1980-06-09,185.42,194,37
+273593,1729,England,Premier League,2014/2015,37,2015-05-16,2015,1724347,away_team,8197,Leicester City,LEI,0,draw,1,13423,Marcin Wasilewski,1980-06-09,185.42,194,38
+273583,1729,England,Premier League,2014/2015,38,2015-05-24,2015,1724358,home_team,8197,Leicester City,LEI,5,won,3,13423,Marcin Wasilewski,1980-06-09,185.42,194,41
+111837,1729,England,Premier League,2014/2015,1,2014-08-18,2014,1723983,away_team,8455,Chelsea,CHE,3,won,3,107417,Eden Hazard,1991-01-07,172.72,163,3
+111778,1729,England,Premier League,2014/2015,2,2014-08-23,2014,1723993,home_team,8455,Chelsea,CHE,2,won,3,107417,Eden Hazard,1991-01-07,172.72,163,6
+111838,1729,England,Premier League,2014/2015,3,2014-08-30,2014,1724004,away_team,8455,Chelsea,CHE,6,won,3,107417,Eden Hazard,1991-01-07,172.72,163,9
+111779,1729,England,Premier League,2014/2015,4,2014-09-13,2014,1724013,home_team,8455,Chelsea,CHE,4,won,3,107417,Eden Hazard,1991-01-07,172.72,163,12
+111839,1729,England,Premier League,2014/2015,5,2014-09-21,2014,1724026,away_team,8455,Chelsea,CHE,1,draw,1,107417,Eden Hazard,1991-01-07,172.72,163,13
+111780,1729,England,Premier League,2014/2015,6,2014-09-27,2014,1724033,home_team,8455,Chelsea,CHE,3,won,3,107417,Eden Hazard,1991-01-07,172.72,163,16
+111781,1729,England,Premier League,2014/2015,7,2014-10-05,2014,1724043,home_team,8455,Chelsea,CHE,2,won,3,107417,Eden Hazard,1991-01-07,172.72,163,19
+111840,1729,England,Premier League,2014/2015,8,2014-10-18,2014,1724054,away_team,8455,Chelsea,CHE,2,won,3,107417,Eden Hazard,1991-01-07,172.72,163,22
+111841,1729,England,Premier League,2014/2015,9,2014-10-26,2014,1724064,away_team,8455,Chelsea,CHE,1,draw,1,107417,Eden Hazard,1991-01-07,172.72,163,23
+111782,1729,England,Premier League,2014/2015,10,2014-11-01,2014,1724074,home_team,8455,Chelsea,CHE,2,won,3,107417,Eden Hazard,1991-01-07,172.72,163,26
+111842,1729,England,Premier League,2014/2015,11,2014-11-08,2014,1724083,away_team,8455,Chelsea,CHE,2,won,3,107417,Eden Hazard,1991-01-07,172.72,163,29
+111783,1729,England,Premier League,2014/2015,12,2014-11-22,2014,1724094,home_team,8455,Chelsea,CHE,2,won,3,107417,Eden Hazard,1991-01-07,172.72,163,32
+111843,1729,England,Premier League,2014/2015,13,2014-11-29,2014,1724107,away_team,8455,Chelsea,CHE,0,draw,1,107417,Eden Hazard,1991-01-07,172.72,163,33
+111784,1729,England,Premier League,2014/2015,14,2014-12-03,2014,1724119,home_team,8455,Chelsea,CHE,3,won,3,107417,Eden Hazard,1991-01-07,172.72,163,36
+111844,1729,England,Premier League,2014/2015,15,2014-12-06,2014,1724126,away_team,8455,Chelsea,CHE,1,lost,0,107417,Eden Hazard,1991-01-07,172.72,163,36
+111785,1729,England,Premier League,2014/2015,16,2014-12-13,2014,1724134,home_team,8455,Chelsea,CHE,2,won,3,107417,Eden Hazard,1991-01-07,172.72,163,39
+111845,1729,England,Premier League,2014/2015,17,2014-12-22,2014,1724149,away_team,8455,Chelsea,CHE,2,won,3,107417,Eden Hazard,1991-01-07,172.72,163,42
+111786,1729,England,Premier League,2014/2015,18,2014-12-26,2014,1724154,home_team,8455,Chelsea,CHE,2,won,3,107417,Eden Hazard,1991-01-07,172.72,163,45
+111846,1729,England,Premier League,2014/2015,19,2014-12-28,2014,1724168,away_team,8455,Chelsea,CHE,1,draw,1,107417,Eden Hazard,1991-01-07,172.72,163,46
+111847,1729,England,Premier League,2014/2015,20,2015-01-01,2015,1724180,away_team,8455,Chelsea,CHE,3,lost,0,107417,Eden Hazard,1991-01-07,172.72,163,46
+111787,1729,England,Premier League,2014/2015,21,2015-01-10,2015,1724184,home_team,8455,Chelsea,CHE,2,won,3,107417,Eden Hazard,1991-01-07,172.72,163,49
+111848,1729,England,Premier League,2014/2015,22,2015-01-17,2015,1724199,away_team,8455,Chelsea,CHE,5,won,3,107417,Eden Hazard,1991-01-07,172.72,163,52
+111788,1729,England,Premier League,2014/2015,23,2015-01-31,2015,1724203,home_team,8455,Chelsea,CHE,1,draw,1,107417,Eden Hazard,1991-01-07,172.72,163,53
+111849,1729,England,Premier League,2014/2015,24,2015-02-07,2015,1724212,away_team,8455,Chelsea,CHE,2,won,3,107417,Eden Hazard,1991-01-07,172.72,163,56
+111789,1729,England,Premier League,2014/2015,25,2015-02-11,2015,1724229,home_team,8455,Chelsea,CHE,1,won,3,107417,Eden Hazard,1991-01-07,172.72,163,59
+111790,1729,England,Premier League,2014/2015,26,2015-02-21,2015,1724233,home_team,8455,Chelsea,CHE,1,draw,1,107417,Eden Hazard,1991-01-07,172.72,163,60
+111854,1729,England,Premier League,2014/2015,27,2015-04-29,2015,1724244,away_team,8455,Chelsea,CHE,3,won,3,107417,Eden Hazard,1991-01-07,172.72,163,63
+111850,1729,England,Premier League,2014/2015,28,2015-03-04,2015,1724256,away_team,8455,Chelsea,CHE,1,won,3,107417,Eden Hazard,1991-01-07,172.72,163,66
+111791,1729,England,Premier League,2014/2015,29,2015-03-15,2015,1724264,home_team,8455,Chelsea,CHE,1,draw,1,107417,Eden Hazard,1991-01-07,172.72,163,67
+111851,1729,England,Premier League,2014/2015,30,2015-03-22,2015,1724273,away_team,8455,Chelsea,CHE,3,won,3,107417,Eden Hazard,1991-01-07,172.72,163,70
+111792,1729,England,Premier League,2014/2015,31,2015-04-04,2015,1724284,home_team,8455,Chelsea,CHE,2,won,3,107417,Eden Hazard,1991-01-07,172.72,163,73
+111852,1729,England,Premier League,2014/2015,32,2015-04-12,2015,1724295,away_team,8455,Chelsea,CHE,1,won,3,107417,Eden Hazard,1991-01-07,172.72,163,76
+111793,1729,England,Premier League,2014/2015,33,2015-04-18,2015,1724304,home_team,8455,Chelsea,CHE,1,won,3,107417,Eden Hazard,1991-01-07,172.72,163,79
+111853,1729,England,Premier League,2014/2015,34,2015-04-26,2015,1724312,away_team,8455,Chelsea,CHE,0,draw,1,107417,Eden Hazard,1991-01-07,172.72,163,80
+111794,1729,England,Premier League,2014/2015,35,2015-05-03,2015,1724323,home_team,8455,Chelsea,CHE,1,won,3,107417,Eden Hazard,1991-01-07,172.72,163,83
+111795,1729,England,Premier League,2014/2015,36,2015-05-10,2015,1724334,home_team,8455,Chelsea,CHE,1,draw,1,107417,Eden Hazard,1991-01-07,172.72,163,84
+111855,1729,England,Premier League,2014/2015,37,2015-05-18,2015,1724350,away_team,8455,Chelsea,CHE,0,lost,0,107417,Eden Hazard,1991-01-07,172.72,163,84
+111796,1729,England,Premier League,2014/2015,38,2015-05-24,2015,1724354,home_team,8455,Chelsea,CHE,3,won,3,107417,Eden Hazard,1991-01-07,172.72,163,87
+197028,1729,England,Premier League,2014/2015,1,2014-08-17,2014,1723987,away_team,8456,Manchester City,MCI,2,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,3
+196992,1729,England,Premier League,2014/2015,2,2014-08-25,2014,1723997,home_team,8456,Manchester City,MCI,3,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,6
+196993,1729,England,Premier League,2014/2015,3,2014-08-30,2014,1724006,home_team,8456,Manchester City,MCI,0,lost,0,30459,Martin Demichelis,1980-12-20,182.88,172,6
+197029,1729,England,Premier League,2014/2015,4,2014-09-13,2014,1724012,away_team,8456,Manchester City,MCI,2,draw,1,30459,Martin Demichelis,1980-12-20,182.88,172,7
+214201,1729,England,Premier League,2014/2015,5,2014-09-21,2014,1724026,home_team,8456,Manchester City,MCI,1,draw,1,15403,Edin Dzeko,1986-03-17,193.04,185,8
+214238,1729,England,Premier League,2014/2015,6,2014-09-27,2014,1724035,away_team,8456,Manchester City,MCI,4,won,3,15403,Edin Dzeko,1986-03-17,193.04,185,11
+214239,1729,England,Premier League,2014/2015,7,2014-10-04,2014,1724042,away_team,8456,Manchester City,MCI,2,won,3,15403,Edin Dzeko,1986-03-17,193.04,185,14
+196994,1729,England,Premier League,2014/2015,8,2014-10-18,2014,1724056,home_team,8456,Manchester City,MCI,4,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,17
+214240,1729,England,Premier League,2014/2015,9,2014-10-25,2014,1724071,away_team,8456,Manchester City,MCI,1,lost,0,15403,Edin Dzeko,1986-03-17,193.04,185,17
+196995,1729,England,Premier League,2014/2015,10,2014-11-02,2014,1724079,home_team,8456,Manchester City,MCI,1,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,20
+197030,1729,England,Premier League,2014/2015,11,2014-11-08,2014,1724085,away_team,8456,Manchester City,MCI,2,draw,1,30459,Martin Demichelis,1980-12-20,182.88,172,21
+196996,1729,England,Premier League,2014/2015,12,2014-11-22,2014,1724099,home_team,8456,Manchester City,MCI,2,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,24
+277112,1729,England,Premier League,2014/2015,13,2014-11-30,2014,1724106,away_team,8456,Manchester City,MCI,3,won,3,156551,Eliaquim Mangala,1991-02-13,187.96,185,27
+172368,1729,England,Premier League,2014/2015,14,2014-12-03,2014,1724121,away_team,8456,Manchester City,MCI,4,won,3,191616,Dedryck Boyata,1990-11-28,187.96,185,30
+196997,1729,England,Premier League,2014/2015,15,2014-12-06,2014,1724125,home_team,8456,Manchester City,MCI,1,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,33
+277113,1729,England,Premier League,2014/2015,16,2014-12-13,2014,1724137,away_team,8456,Manchester City,MCI,1,won,3,156551,Eliaquim Mangala,1991-02-13,187.96,185,36
+196998,1729,England,Premier League,2014/2015,17,2014-12-20,2014,1724145,home_team,8456,Manchester City,MCI,3,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,39
+197032,1729,England,Premier League,2014/2015,18,2014-12-26,2014,1724161,away_team,8456,Manchester City,MCI,3,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,42
+196999,1729,England,Premier League,2014/2015,19,2014-12-28,2014,1724165,home_team,8456,Manchester City,MCI,2,draw,1,30459,Martin Demichelis,1980-12-20,182.88,172,43
+197000,1729,England,Premier League,2014/2015,20,2015-01-01,2015,1724175,home_team,8456,Manchester City,MCI,3,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,46
+197033,1729,England,Premier League,2014/2015,21,2015-01-10,2015,1724186,away_team,8456,Manchester City,MCI,1,draw,1,30459,Martin Demichelis,1980-12-20,182.88,172,47
+197001,1729,England,Premier League,2014/2015,22,2015-01-18,2015,1724196,home_team,8456,Manchester City,MCI,0,lost,0,30459,Martin Demichelis,1980-12-20,182.88,172,47
+197034,1729,England,Premier League,2014/2015,23,2015-01-31,2015,1724203,away_team,8456,Manchester City,MCI,1,draw,1,30459,Martin Demichelis,1980-12-20,182.88,172,48
+197002,1729,England,Premier League,2014/2015,24,2015-02-07,2015,1724216,home_team,8456,Manchester City,MCI,1,draw,1,30459,Martin Demichelis,1980-12-20,182.88,172,49
+277116,1729,England,Premier League,2014/2015,25,2015-02-11,2015,1724230,away_team,8456,Manchester City,MCI,4,won,3,156551,Eliaquim Mangala,1991-02-13,187.96,185,52
+214203,1729,England,Premier League,2014/2015,26,2015-02-21,2015,1724237,home_team,8456,Manchester City,MCI,5,won,3,15403,Edin Dzeko,1986-03-17,193.04,185,55
+214241,1729,England,Premier League,2014/2015,27,2015-03-01,2015,1724245,away_team,8456,Manchester City,MCI,1,lost,0,15403,Edin Dzeko,1986-03-17,193.04,185,55
+197003,1729,England,Premier League,2014/2015,28,2015-03-04,2015,1724258,home_team,8456,Manchester City,MCI,2,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,58
+197035,1729,England,Premier League,2014/2015,29,2015-03-14,2015,1724263,away_team,8456,Manchester City,MCI,0,lost,0,30459,Martin Demichelis,1980-12-20,182.88,172,58
+277091,1729,England,Premier League,2014/2015,30,2015-03-21,2015,1724275,home_team,8456,Manchester City,MCI,3,won,3,156551,Eliaquim Mangala,1991-02-13,187.96,185,61
+197036,1729,England,Premier League,2014/2015,31,2015-04-06,2015,1724285,away_team,8456,Manchester City,MCI,1,lost,0,30459,Martin Demichelis,1980-12-20,182.88,172,61
+197037,1729,England,Premier League,2014/2015,32,2015-04-12,2015,1724294,away_team,8456,Manchester City,MCI,2,lost,0,30459,Martin Demichelis,1980-12-20,182.88,172,61
+197004,1729,England,Premier League,2014/2015,33,2015-04-19,2015,1724309,home_team,8456,Manchester City,MCI,2,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,64
+197005,1729,England,Premier League,2014/2015,34,2015-04-25,2015,1724316,home_team,8456,Manchester City,MCI,3,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,67
+197038,1729,England,Premier League,2014/2015,35,2015-05-03,2015,1724330,away_team,8456,Manchester City,MCI,1,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,70
+197006,1729,England,Premier League,2014/2015,36,2015-05-10,2015,1724339,home_team,8456,Manchester City,MCI,6,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,73
+197039,1729,England,Premier League,2014/2015,37,2015-05-17,2015,1724348,away_team,8456,Manchester City,MCI,4,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,76
+197007,1729,England,Premier League,2014/2015,38,2015-05-24,2015,1724359,home_team,8456,Manchester City,MCI,2,won,3,30459,Martin Demichelis,1980-12-20,182.88,172,79
+176071,1729,England,Premier League,2014/2015,1,2014-08-16,2014,1723988,away_team,8667,Hull City,HUL,1,won,3,32496,Allan McGregor,1982-01-31,182.88,185,3
+176046,1729,England,Premier League,2014/2015,2,2014-08-24,2014,1723996,home_team,8667,Hull City,HUL,1,draw,1,32496,Allan McGregor,1982-01-31,182.88,185,4
+176072,1729,England,Premier League,2014/2015,3,2014-08-31,2014,1724002,away_team,8667,Hull City,HUL,1,lost,0,32496,Allan McGregor,1982-01-31,182.88,185,4
+176047,1729,England,Premier League,2014/2015,4,2014-09-15,2014,1724015,home_team,8667,Hull City,HUL,2,draw,1,32496,Allan McGregor,1982-01-31,182.88,185,5
+176073,1729,England,Premier League,2014/2015,5,2014-09-20,2014,1724027,away_team,8667,Hull City,HUL,2,draw,1,32496,Allan McGregor,1982-01-31,182.88,185,6
+176048,1729,England,Premier League,2014/2015,6,2014-09-27,2014,1724035,home_team,8667,Hull City,HUL,2,lost,0,32496,Allan McGregor,1982-01-31,182.88,185,6
+177729,1729,England,Premier League,2014/2015,7,2014-10-04,2014,1724044,home_team,8667,Hull City,HUL,2,won,3,8922,Nikica Jelavic,1985-08-27,187.96,185,9
+120352,1729,England,Premier League,2014/2015,8,2014-10-18,2014,1724052,away_team,8667,Hull City,HUL,2,draw,1,26163,Hatem Ben Arfa,1987-03-07,177.8,163,10
+27309,1729,England,Premier League,2014/2015,9,2014-10-25,2014,1724063,away_team,8667,Hull City,HUL,0,draw,1,42247,Eldin Jakupovic,1984-10-02,190.5,183,11
+27307,1729,England,Premier League,2014/2015,10,2014-11-01,2014,1724077,home_team,8667,Hull City,HUL,0,lost,0,42247,Eldin Jakupovic,1984-10-02,190.5,183,11
+163567,1729,England,Premier League,2014/2015,11,2014-11-08,2014,1724082,away_team,8667,Hull City,HUL,0,lost,0,23839,Sone Aluko,1989-02-19,172.72,165,11
+120351,1729,England,Premier League,2014/2015,12,2014-11-23,2014,1724097,home_team,8667,Hull City,HUL,1,lost,0,26163,Hatem Ben Arfa,1987-03-07,177.8,163,11
+120354,1729,England,Premier League,2014/2015,13,2014-11-29,2014,1724104,away_team,8667,Hull City,HUL,0,lost,0,26163,Hatem Ben Arfa,1987-03-07,177.8,163,11
+176075,1729,England,Premier League,2014/2015,14,2014-12-03,2014,1724120,away_team,8667,Hull City,HUL,1,draw,1,32496,Allan McGregor,1982-01-31,182.88,185,12
+163558,1729,England,Premier League,2014/2015,15,2014-12-06,2014,1724123,home_team,8667,Hull City,HUL,0,draw,1,23839,Sone Aluko,1989-02-19,172.72,165,13
+163568,1729,England,Premier League,2014/2015,16,2014-12-13,2014,1724134,away_team,8667,Hull City,HUL,0,lost,0,23839,Sone Aluko,1989-02-19,172.72,165,13
+176051,1729,England,Premier League,2014/2015,17,2014-12-20,2014,1724143,home_team,8667,Hull City,HUL,0,lost,0,32496,Allan McGregor,1982-01-31,182.88,185,13
+163569,1729,England,Premier League,2014/2015,18,2014-12-26,2014,1724159,away_team,8667,Hull City,HUL,3,won,3,23839,Sone Aluko,1989-02-19,172.72,165,16
+163559,1729,England,Premier League,2014/2015,19,2014-12-28,2014,1724163,home_team,8667,Hull City,HUL,0,lost,0,23839,Sone Aluko,1989-02-19,172.72,165,16
+176053,1729,England,Premier League,2014/2015,20,2015-01-01,2015,1724173,home_team,8667,Hull City,HUL,2,won,3,32496,Allan McGregor,1982-01-31,182.88,185,19
+176078,1729,England,Premier League,2014/2015,21,2015-01-10,2015,1724191,away_team,8667,Hull City,HUL,0,lost,0,32496,Allan McGregor,1982-01-31,182.88,185,19
+163570,1729,England,Premier League,2014/2015,22,2015-01-18,2015,1724201,away_team,8667,Hull City,HUL,0,lost,0,23839,Sone Aluko,1989-02-19,172.72,165,19
+176054,1729,England,Premier League,2014/2015,23,2015-01-31,2015,1724205,home_team,8667,Hull City,HUL,0,lost,0,32496,Allan McGregor,1982-01-31,182.88,185,19
+163571,1729,England,Premier League,2014/2015,24,2015-02-07,2015,1724216,away_team,8667,Hull City,HUL,1,draw,1,23839,Sone Aluko,1989-02-19,172.72,165,20
+176055,1729,England,Premier League,2014/2015,25,2015-02-10,2015,1724223,home_team,8667,Hull City,HUL,2,won,3,32496,Allan McGregor,1982-01-31,182.88,185,23
+176056,1729,England,Premier League,2014/2015,26,2015-02-21,2015,1724236,home_team,8667,Hull City,HUL,2,won,3,32496,Allan McGregor,1982-01-31,182.88,185,26
+163572,1729,England,Premier League,2014/2015,27,2015-02-28,2015,1724249,away_team,8667,Hull City,HUL,0,lost,0,23839,Sone Aluko,1989-02-19,172.72,165,26
+176057,1729,England,Premier League,2014/2015,28,2015-03-03,2015,1724253,home_team,8667,Hull City,HUL,1,draw,1,32496,Allan McGregor,1982-01-31,182.88,185,27
+176082,1729,England,Premier League,2014/2015,29,2015-03-14,2015,1724267,away_team,8667,Hull City,HUL,0,draw,1,32496,Allan McGregor,1982-01-31,182.88,185,28
+176058,1729,England,Premier League,2014/2015,30,2015-03-22,2015,1724273,home_team,8667,Hull City,HUL,2,lost,0,32496,Allan McGregor,1982-01-31,182.88,185,28
+176083,1729,England,Premier League,2014/2015,31,2015-04-04,2015,1724290,away_team,8667,Hull City,HUL,1,lost,0,32496,Allan McGregor,1982-01-31,182.88,185,28
+163573,1729,England,Premier League,2014/2015,32,2015-04-11,2015,1724296,away_team,8667,Hull City,HUL,0,lost,0,23839,Sone Aluko,1989-02-19,172.72,165,28
+163560,1729,England,Premier League,2014/2015,33,2015-04-28,2015,1724307,home_team,8667,Hull City,HUL,1,won,3,23839,Sone Aluko,1989-02-19,172.72,165,31
+163574,1729,England,Premier League,2014/2015,34,2015-04-25,2015,1724314,away_team,8667,Hull City,HUL,2,won,3,23839,Sone Aluko,1989-02-19,172.72,165,34
+163561,1729,England,Premier League,2014/2015,35,2015-05-04,2015,1724324,home_team,8667,Hull City,HUL,1,lost,0,23839,Sone Aluko,1989-02-19,172.72,165,34
+163562,1729,England,Premier League,2014/2015,36,2015-05-09,2015,1724337,home_team,8667,Hull City,HUL,0,lost,0,23839,Sone Aluko,1989-02-19,172.72,165,34
+177754,1729,England,Premier League,2014/2015,37,2015-05-16,2015,1724349,away_team,8667,Hull City,HUL,0,lost,0,8922,Nikica Jelavic,1985-08-27,187.96,185,34
+177737,1729,England,Premier League,2014/2015,38,2015-05-24,2015,1724357,home_team,8667,Hull City,HUL,0,draw,1,8922,Nikica Jelavic,1985-08-27,187.96,185,35
+71280,1729,England,Premier League,2014/2015,1,2014-08-16,2014,1723982,home_team,9825,Arsenal,ARS,2,won,3,192921,Yaya Sanogo,1993-01-27,193.04,190,3
+76623,1729,England,Premier League,2014/2015,2,2014-08-23,2014,1723995,away_team,9825,Arsenal,ARS,2,draw,1,26154,Mathieu Debuchy,1985-07-28,177.8,168,4
+71281,1729,England,Premier League,2014/2015,3,2014-08-31,2014,1724005,away_team,9825,Arsenal,ARS,1,draw,1,192921,Yaya Sanogo,1993-01-27,193.04,190,5
+76617,1729,England,Premier League,2014/2015,4,2014-09-13,2014,1724012,home_team,9825,Arsenal,ARS,2,draw,1,26154,Mathieu Debuchy,1985-07-28,177.8,168,6
+134705,1729,England,Premier League,2014/2015,5,2014-09-20,2014,1724022,away_team,9825,Arsenal,ARS,3,won,3,46539,Laurent Koscielny,1985-09-10,185.42,165,9
+134621,1729,England,Premier League,2014/2015,6,2014-09-27,2014,1724032,home_team,9825,Arsenal,ARS,1,draw,1,46539,Laurent Koscielny,1985-09-10,185.42,165,10
+134706,1729,England,Premier League,2014/2015,7,2014-10-05,2014,1724043,away_team,9825,Arsenal,ARS,0,lost,0,46539,Laurent Koscielny,1985-09-10,185.42,165,10
+240051,1729,England,Premier League,2014/2015,8,2014-10-18,2014,1724052,home_team,9825,Arsenal,ARS,2,draw,1,35606,Per Mertesacker,1984-09-29,198.12,198,11
+240127,1729,England,Premier League,2014/2015,9,2014-10-25,2014,1724067,away_team,9825,Arsenal,ARS,2,won,3,35606,Per Mertesacker,1984-09-29,198.12,198,14
+240052,1729,England,Premier League,2014/2015,10,2014-11-01,2014,1724072,home_team,9825,Arsenal,ARS,3,won,3,35606,Per Mertesacker,1984-09-29,198.12,198,17
+240128,1729,England,Premier League,2014/2015,11,2014-11-09,2014,1724088,away_team,9825,Arsenal,ARS,1,lost,0,35606,Per Mertesacker,1984-09-29,198.12,198,17
+240053,1729,England,Premier League,2014/2015,12,2014-11-22,2014,1724092,home_team,9825,Arsenal,ARS,1,lost,0,35606,Per Mertesacker,1984-09-29,198.12,198,17
+134707,1729,England,Premier League,2014/2015,13,2014-11-29,2014,1724110,away_team,9825,Arsenal,ARS,1,won,3,46539,Laurent Koscielny,1985-09-10,185.42,165,20
+134622,1729,England,Premier League,2014/2015,14,2014-12-03,2014,1724112,home_team,9825,Arsenal,ARS,1,won,3,46539,Laurent Koscielny,1985-09-10,185.42,165,23
+141916,1729,England,Premier League,2014/2015,15,2014-12-06,2014,1724129,away_team,9825,Arsenal,ARS,2,lost,0,46469,Olivier Giroud,1986-09-30,193.04,194,23
+76618,1729,England,Premier League,2014/2015,16,2014-12-13,2014,1724132,home_team,9825,Arsenal,ARS,4,won,3,26154,Mathieu Debuchy,1985-07-28,177.8,168,26
+76625,1729,England,Premier League,2014/2015,17,2014-12-21,2014,1724144,away_team,9825,Arsenal,ARS,2,draw,1,26154,Mathieu Debuchy,1985-07-28,177.8,168,27
+76619,1729,England,Premier League,2014/2015,18,2014-12-26,2014,1724152,home_team,9825,Arsenal,ARS,2,won,3,26154,Mathieu Debuchy,1985-07-28,177.8,168,30
+76626,1729,England,Premier League,2014/2015,19,2014-12-28,2014,1724171,away_team,9825,Arsenal,ARS,2,won,3,26154,Mathieu Debuchy,1985-07-28,177.8,168,33
+76627,1729,England,Premier League,2014/2015,20,2015-01-01,2015,1724178,away_team,9825,Arsenal,ARS,0,lost,0,26154,Mathieu Debuchy,1985-07-28,177.8,168,33
+76620,1729,England,Premier League,2014/2015,21,2015-01-11,2015,1724182,home_team,9825,Arsenal,ARS,3,won,3,26154,Mathieu Debuchy,1985-07-28,177.8,168,36
+118263,1729,England,Premier League,2014/2015,22,2015-01-18,2015,1724196,away_team,9825,Arsenal,ARS,2,won,3,50065,David Ospina,1988-08-31,182.88,174,39
+118253,1729,England,Premier League,2014/2015,23,2015-02-01,2015,1724202,home_team,9825,Arsenal,ARS,5,won,3,50065,David Ospina,1988-08-31,182.88,174,42
+118264,1729,England,Premier League,2014/2015,24,2015-02-07,2015,1724220,away_team,9825,Arsenal,ARS,1,lost,0,50065,David Ospina,1988-08-31,182.88,174,42
+118254,1729,England,Premier League,2014/2015,25,2015-02-10,2015,1724222,home_team,9825,Arsenal,ARS,2,won,3,50065,David Ospina,1988-08-31,182.88,174,45
+118265,1729,England,Premier League,2014/2015,26,2015-02-21,2015,1724234,away_team,9825,Arsenal,ARS,2,won,3,50065,David Ospina,1988-08-31,182.88,174,48
+118255,1729,England,Premier League,2014/2015,27,2015-03-01,2015,1724242,home_team,9825,Arsenal,ARS,2,won,3,50065,David Ospina,1988-08-31,182.88,174,51
+118266,1729,England,Premier League,2014/2015,28,2015-03-04,2015,1724254,away_team,9825,Arsenal,ARS,2,won,3,50065,David Ospina,1988-08-31,182.88,174,54
+118256,1729,England,Premier League,2014/2015,29,2015-03-14,2015,1724262,home_team,9825,Arsenal,ARS,3,won,3,50065,David Ospina,1988-08-31,182.88,174,57
+118267,1729,England,Premier League,2014/2015,30,2015-03-21,2015,1724276,away_team,9825,Arsenal,ARS,2,won,3,50065,David Ospina,1988-08-31,182.88,174,60
+118257,1729,England,Premier League,2014/2015,31,2015-04-04,2015,1724282,home_team,9825,Arsenal,ARS,4,won,3,50065,David Ospina,1988-08-31,182.88,174,63
+118268,1729,England,Premier League,2014/2015,32,2015-04-11,2015,1724292,away_team,9825,Arsenal,ARS,1,won,3,50065,David Ospina,1988-08-31,182.88,174,66
+118260,1729,England,Premier League,2014/2015,33,2015-05-20,2015,1724302,home_team,9825,Arsenal,ARS,0,draw,1,50065,David Ospina,1988-08-31,182.88,174,67
+118258,1729,England,Premier League,2014/2015,34,2015-04-26,2015,1724312,home_team,9825,Arsenal,ARS,0,draw,1,50065,David Ospina,1988-08-31,182.88,174,68
+118269,1729,England,Premier League,2014/2015,35,2015-05-04,2015,1724324,away_team,9825,Arsenal,ARS,3,won,3,50065,David Ospina,1988-08-31,182.88,174,71
+118259,1729,England,Premier League,2014/2015,36,2015-05-11,2015,1724332,home_team,9825,Arsenal,ARS,0,lost,0,50065,David Ospina,1988-08-31,182.88,174,71
+118270,1729,England,Premier League,2014/2015,37,2015-05-17,2015,1724344,away_team,9825,Arsenal,ARS,1,draw,1,50065,David Ospina,1988-08-31,182.88,174,72
+118261,1729,England,Premier League,2014/2015,38,2015-05-24,2015,1724352,home_team,9825,Arsenal,ARS,4,won,3,50065,David Ospina,1988-08-31,182.88,174,75
+117943,1729,England,Premier League,2014/2015,1,2014-08-16,2014,1723988,home_team,10172,Queens Park Rangers,QPR,0,lost,0,39987,Loic Remy,1987-01-02,185.42,176,0
+117951,1729,England,Premier League,2014/2015,2,2014-08-24,2014,1724001,away_team,10172,Queens Park Rangers,QPR,0,lost,0,39987,Loic Remy,1987-01-02,185.42,176,0
+138571,1729,England,Premier League,2014/2015,3,2014-08-30,2014,1724008,home_team,10172,Queens Park Rangers,QPR,1,won,3,24205,Joey Barton,1982-09-02,180.34,154,3
+140008,1729,England,Premier League,2014/2015,4,2014-09-14,2014,1724017,away_team,10172,Queens Park Rangers,QPR,0,lost,0,109298,Mauricio Isla,1988-06-12,177.8,159,3
+138572,1729,England,Premier League,2014/2015,5,2014-09-20,2014,1724028,home_team,10172,Queens Park Rangers,QPR,2,draw,1,24205,Joey Barton,1982-09-02,180.34,154,4
+140009,1729,England,Premier League,2014/2015,6,2014-09-27,2014,1724038,away_team,10172,Queens Park Rangers,QPR,1,lost,0,109298,Mauricio Isla,1988-06-12,177.8,159,4
+296317,1729,England,Premier League,2014/2015,7,2014-10-05,2014,1724051,away_team,10172,Queens Park Rangers,QPR,0,lost,0,63520,Armand Traore,1989-10-08,182.88,181,4
+139996,1729,England,Premier League,2014/2015,8,2014-10-19,2014,1724058,home_team,10172,Queens Park Rangers,QPR,2,lost,0,109298,Mauricio Isla,1988-06-12,177.8,159,4
+139997,1729,England,Premier League,2014/2015,9,2014-10-27,2014,1724065,home_team,10172,Queens Park Rangers,QPR,2,won,3,109298,Mauricio Isla,1988-06-12,177.8,159,7
+140010,1729,England,Premier League,2014/2015,10,2014-11-01,2014,1724074,away_team,10172,Queens Park Rangers,QPR,1,lost,0,109298,Mauricio Isla,1988-06-12,177.8,159,7
+139998,1729,England,Premier League,2014/2015,11,2014-11-08,2014,1724085,home_team,10172,Queens Park Rangers,QPR,2,draw,1,109298,Mauricio Isla,1988-06-12,177.8,159,8
+138598,1729,England,Premier League,2014/2015,12,2014-11-22,2014,1724100,away_team,10172,Queens Park Rangers,QPR,0,lost,0,24205,Joey Barton,1982-09-02,180.34,154,8
+138573,1729,England,Premier League,2014/2015,13,2014-11-29,2014,1724105,home_team,10172,Queens Park Rangers,QPR,3,won,3,24205,Joey Barton,1982-09-02,180.34,154,11
+138599,1729,England,Premier League,2014/2015,14,2014-12-02,2014,1724116,away_team,10172,Queens Park Rangers,QPR,0,lost,0,24205,Joey Barton,1982-09-02,180.34,154,11
+138574,1729,England,Premier League,2014/2015,15,2014-12-06,2014,1724127,home_team,10172,Queens Park Rangers,QPR,2,won,3,24205,Joey Barton,1982-09-02,180.34,154,14
+138600,1729,England,Premier League,2014/2015,16,2014-12-15,2014,1724136,away_team,10172,Queens Park Rangers,QPR,1,lost,0,24205,Joey Barton,1982-09-02,180.34,154,14
+138575,1729,England,Premier League,2014/2015,17,2014-12-20,2014,1724147,home_team,10172,Queens Park Rangers,QPR,3,won,3,24205,Joey Barton,1982-09-02,180.34,154,17
+140012,1729,England,Premier League,2014/2015,18,2014-12-26,2014,1724152,away_team,10172,Queens Park Rangers,QPR,1,lost,0,109298,Mauricio Isla,1988-06-12,177.8,159,17
+138576,1729,England,Premier League,2014/2015,19,2014-12-28,2014,1724167,home_team,10172,Queens Park Rangers,QPR,0,draw,1,24205,Joey Barton,1982-09-02,180.34,154,18
+138577,1729,England,Premier League,2014/2015,20,2015-01-01,2015,1724177,home_team,10172,Queens Park Rangers,QPR,1,draw,1,24205,Joey Barton,1982-09-02,180.34,154,19
+138601,1729,England,Premier League,2014/2015,21,2015-01-10,2015,1724183,away_team,10172,Queens Park Rangers,QPR,1,lost,0,24205,Joey Barton,1982-09-02,180.34,154,19
+138578,1729,England,Premier League,2014/2015,22,2015-01-17,2015,1724198,home_team,10172,Queens Park Rangers,QPR,0,lost,0,24205,Joey Barton,1982-09-02,180.34,154,19
+138602,1729,England,Premier League,2014/2015,23,2015-01-31,2015,1724209,away_team,10172,Queens Park Rangers,QPR,1,lost,0,24205,Joey Barton,1982-09-02,180.34,154,19
+138579,1729,England,Premier League,2014/2015,24,2015-02-07,2015,1724218,home_team,10172,Queens Park Rangers,QPR,0,lost,0,24205,Joey Barton,1982-09-02,180.34,154,19
+138603,1729,England,Premier League,2014/2015,25,2015-02-10,2015,1724231,away_team,10172,Queens Park Rangers,QPR,2,won,3,24205,Joey Barton,1982-09-02,180.34,154,22
+138604,1729,England,Premier League,2014/2015,26,2015-02-21,2015,1724236,away_team,10172,Queens Park Rangers,QPR,1,lost,0,24205,Joey Barton,1982-09-02,180.34,154,22
+140004,1729,England,Premier League,2014/2015,27,2015-03-07,2015,1724248,home_team,10172,Queens Park Rangers,QPR,1,lost,0,109298,Mauricio Isla,1988-06-12,177.8,159,22
+300582,1729,England,Premier League,2014/2015,28,2015-03-04,2015,1724254,home_team,10172,Queens Park Rangers,QPR,1,lost,0,24209,Nedum Onuoha,1986-11-30,187.96,172,22
+300609,1729,England,Premier League,2014/2015,29,2015-03-14,2015,1724265,away_team,10172,Queens Park Rangers,QPR,1,lost,0,24209,Nedum Onuoha,1986-11-30,187.96,172,22
+138580,1729,England,Premier League,2014/2015,30,2015-03-22,2015,1724277,home_team,10172,Queens Park Rangers,QPR,1,lost,0,24205,Joey Barton,1982-09-02,180.34,154,22
+138605,1729,England,Premier League,2014/2015,31,2015-04-04,2015,1724291,away_team,10172,Queens Park Rangers,QPR,4,won,3,24205,Joey Barton,1982-09-02,180.34,154,25
+138581,1729,England,Premier League,2014/2015,32,2015-04-12,2015,1724295,home_team,10172,Queens Park Rangers,QPR,0,lost,0,24205,Joey Barton,1982-09-02,180.34,154,25
+138606,1729,England,Premier League,2014/2015,33,2015-04-07,2015,1724303,away_team,10172,Queens Park Rangers,QPR,3,draw,1,24205,Joey Barton,1982-09-02,180.34,154,26
+138582,1729,England,Premier League,2014/2015,34,2015-04-25,2015,1724318,home_team,10172,Queens Park Rangers,QPR,0,draw,1,24205,Joey Barton,1982-09-02,180.34,154,27
+138607,1729,England,Premier League,2014/2015,35,2015-05-02,2015,1724326,away_team,10172,Queens Park Rangers,QPR,1,lost,0,24205,Joey Barton,1982-09-02,180.34,154,27
+138608,1729,England,Premier League,2014/2015,36,2015-05-10,2015,1724339,away_team,10172,Queens Park Rangers,QPR,0,lost,0,24205,Joey Barton,1982-09-02,180.34,154,27
+138583,1729,England,Premier League,2014/2015,37,2015-05-16,2015,1724345,home_team,10172,Queens Park Rangers,QPR,2,won,3,24205,Joey Barton,1982-09-02,180.34,154,30
+138609,1729,England,Premier League,2014/2015,38,2015-05-24,2015,1724358,away_team,10172,Queens Park Rangers,QPR,1,lost,0,24205,Joey Barton,1982-09-02,180.34,154,30
