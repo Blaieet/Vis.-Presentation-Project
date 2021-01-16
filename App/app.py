@@ -302,6 +302,167 @@ def points_rating(case):
 
 
 
+@app.route("/data/outlier/")
+def outlierStory():
+    pl1415 = pd.read_csv("App/Data/2014-PremierLeague.csv")
+
+    # outlier.rename(columns={"team_name": "Team Name"})
+    df_pointLC1415 = pl1415[pl1415["team_api_id"] == 8197]
+
+    all_but_LC1415 = pl1415[pl1415["team_api_id"] != 8197]
+
+    points1415 = alt.Chart(all_but_LC1415).mark_circle(size=80, opacity=0.5  # , color='grey'
+                                                       ).encode(alt.X('mean_player_rating',
+                                                                      scale=alt.Scale(zero=False),
+                                                                      axis=alt.Axis(title='Team mean player rating')),
+                                                                alt.Y('points_per_game',
+                                                                      scale=alt.Scale(zero=False),
+                                                                      axis=alt.Axis(title='Points per game')),
+                                                                color=alt.Color('team_name',
+                                                                                legend=alt.Legend(title="Team Name")),
+                                                                tooltip="team_name").properties(
+        title="Premier League, Season 2014/15"
+    )
+
+    pointLC1415 = alt.Chart(df_pointLC1415).mark_circle(size=120, opacity=1,
+                                                        color='red').encode(alt.X('mean_player_rating',
+                                                                                  scale=alt.Scale(zero=False),
+                                                                                  axis=alt.Axis(
+                                                                                      title='Team mean player rating')),
+                                                                            alt.Y('points_per_game',
+                                                                                  scale=alt.Scale(zero=False),
+                                                                                  axis=alt.Axis(
+                                                                                      title='Points per game')),
+                                                                            # color=alt.Color('team_name'),
+                                                                            tooltip=[
+                                                                                alt.Tooltip("team_name", title='Team'),
+                                                                                # alt.Tooltip("comment", title="Unexpected victory")
+                                                                                ]).properties(title="Premier League, Season 2014/15")
+    text1415a = alt.Chart({'values': [{'x': 78, 'y': 1.2}]}).mark_text(
+        text='The Leicester finished 14th,'
+        # , angle=346
+    ).encode(
+        x='x:Q', y='y:Q'
+    )
+
+    text1415b = alt.Chart({'values': [{'x': 78.1, 'y': 1.1}]}).mark_text(
+        text='barely escaping relegation...'
+        # , angle=346
+    ).encode(
+        x='x:Q', y='y:Q'
+    )
+
+    return (points1415.transform_regression("mean_player_rating", "points_per_game").mark_line().transform_fold(
+        ["Regression line"], as_=["Regression", "y"]).encode(alt.Color("Regression:N"))
+             + points1415.interactive()
+             + pointLC1415.interactive()
+             + text1415a + text1415b).to_json()
+
+
+@app.route("/data/outlier1516/")
+def outlierStory2015():
+    pl1516 = pd.read_csv("App/Data/2015-PremierLeague.csv")
+
+    # outlier.rename(columns={"team_name": "Team Name"})
+    df_pointLC1516 = pl1516[pl1516["team_api_id"] == 8197]
+
+    # df_pointLC["comment"] = "All odds were againts the LC, but it ended up winning the league. Good team play, or just luck?"
+
+    all_but_LC1516 = pl1516[pl1516["team_api_id"] != 8197]
+
+    points1516 = alt.Chart(all_but_LC1516).mark_circle(size=80, opacity=0.5  # , color='grey'
+                                                       ).encode(alt.X('mean_player_rating',
+                                                                      scale=alt.Scale(zero=False),
+                                                                      axis=alt.Axis(title='Team mean player rating')),
+                                                                alt.Y('points_per_game',
+                                                                      scale=alt.Scale(zero=False),
+                                                                      axis=alt.Axis(title='Points per game')),
+                                                                color=alt.Color('team_name',
+                                                                                legend=alt.Legend(title="Team Name")),
+                                                                tooltip="team_name").properties(
+        title="Premier League, Season 2015/16"
+    )
+
+    pointLC1516 = alt.Chart(df_pointLC1516).mark_circle(size=120, opacity=1,
+                                                        color='green').encode(alt.X('mean_player_rating',
+                                                                                    scale=alt.Scale(zero=False),
+                                                                                    axis=alt.Axis(
+                                                                                        title='Team mean player rating')),
+                                                                              alt.Y('points_per_game',
+                                                                                    scale=alt.Scale(zero=False),
+                                                                                    axis=alt.Axis(
+                                                                                        title='Points per game')),
+                                                                              # color=alt.Color('team_name'),
+                                                                              tooltip=[alt.Tooltip("team_name",
+                                                                                                   title='Team'),
+                                                                                       # alt.Tooltip("comment", title="Unexpected victory")
+                                                                                       ]).properties(
+        title="Premier League, Season 2015/16")
+
+    text1516 = alt.Chart({'values': [{'x': 73, 'y': 2}]}).mark_text(
+        text='Here is our miracle winner, the Leicester City!'
+        # , angle=346
+    ).encode(
+        x='x:Q', y='y:Q'
+    )
+
+    # for regression to work, you have to add interaction to the final plot (not before regression)
+    return (points1516.transform_regression("mean_player_rating", "points_per_game").mark_line().transform_fold(
+        ["Regression line"], as_=["Regression", "y"]).encode(alt.Color("Regression:N"))
+             + points1516.interactive()
+             + pointLC1516.interactive()
+             + text1516).to_json()
+
+
+@app.route("/data/comparePoints/<name>")
+def comparePoints(name):
+    if name == "EFL":
+        dataframe = pd.read_csv("App/Data/LeicesterEFL.csv")
+    elif name == "1415":
+        dataframe = pd.read_csv("App/Data/ChelseaLei.csv")
+    else:
+        pass
+    return comparePointsChart(dataframe)
+
+
+def comparePointsChart(dataframe):
+
+    # flcc = pd.read_csv("App/Data/LeicesterEFL.csv")
+
+    line = alt.Chart(dataframe).mark_line().encode(
+        x=alt.X('Matches', title='Match'),
+        y=alt.Y('value:Q', title='Points per game'),
+        color=alt.Color('variable:N', title="Season")
+    )
+
+    nearest = alt.selection(type='single', nearest=True, on='mouseover',
+                            fields=['Matches'], empty='none')
+
+    selectors = alt.Chart(dataframe).mark_point().encode(
+        x='Matches',
+        opacity=alt.value(0),
+    ).add_selection(
+        nearest
+    )
+
+    points = line.mark_point().encode(
+        opacity=alt.condition(nearest, alt.value(1), alt.value(0))
+    )
+
+    text = line.mark_text(align='right', dx=-15, dy=-15).encode(
+        text=alt.condition(nearest, 'value:Q', alt.value(' '))
+    )
+
+    chart = alt.layer(line, selectors, points, text).configure_axis(
+        grid=False
+    ).configure_point(
+        size=100
+    ).configure_line(
+        size=4
+    ).configure_view(
+        stroke='').properties(width=700, height=300).interactive()
+
+    return chart.to_json()
 
 # render cars.html page
 @app.route("/dashboard")
