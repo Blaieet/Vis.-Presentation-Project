@@ -370,7 +370,7 @@ def outlierStory2015():
 
     all_but_LC1516 = pl1516[pl1516["team_api_id"] != 8197]
 
-    points1516 = alt.Chart(all_but_LC1516).mark_circle(size=80, opacity=0.5  # , color='grey'
+    points1516 = alt.Chart(all_but_LC1516,width=700,height=300).mark_circle(size=80, opacity=0.5  # , color='grey'
                                                        ).encode(alt.X('mean_player_rating',
                                                                       scale=alt.Scale(zero=False),
                                                                       axis=alt.Axis(title='Team mean player rating')),
