@@ -311,7 +311,7 @@ def outlierStory():
 
     all_but_LC1415 = pl1415[pl1415["team_api_id"] != 8197]
 
-    points1415 = alt.Chart(all_but_LC1415).mark_circle(size=80, opacity=0.5  # , color='grey'
+    points1415 = alt.Chart(all_but_LC1415,width=900,height=300).mark_circle(size=80, opacity=0.5  # , color='grey'
                                                        ).encode(alt.X('mean_player_rating',
                                                                       scale=alt.Scale(zero=False),
                                                                       axis=alt.Axis(title='Team mean player rating')),
@@ -321,7 +321,7 @@ def outlierStory():
                                                                 color=alt.Color('team_name',
                                                                                 legend=alt.Legend(title="Team Name")),
                                                                 tooltip="team_name").properties(
-        title="Premier League, Season 2014/15"
+        title=""
     )
 
     pointLC1415 = alt.Chart(df_pointLC1415).mark_circle(size=120, opacity=1,
@@ -337,22 +337,22 @@ def outlierStory():
                                                                             tooltip=[
                                                                                 alt.Tooltip("team_name", title='Team'),
                                                                                 # alt.Tooltip("comment", title="Unexpected victory")
-                                                                                ]).properties(title="Premier League, Season 2014/15")
-    text1415a = alt.Chart({'values': [{'x': 78, 'y': 1.2}]}).mark_text(
+                                                                                ]).properties(title="")
+    text1415a = alt.Chart({'values': [{'x': 71, 'y': 1.3}]}).mark_text(
         text='The Leicester finished 14th,'
         # , angle=346
     ).encode(
         x='x:Q', y='y:Q'
     )
 
-    text1415b = alt.Chart({'values': [{'x': 78.1, 'y': 1.1}]}).mark_text(
+    text1415b = alt.Chart({'values': [{'x': 71.1, 'y': 1.2}]}).mark_text(
         text='barely escaping relegation...'
         # , angle=346
     ).encode(
         x='x:Q', y='y:Q'
     )
 
-    return (points1415.transform_regression("mean_player_rating", "points_per_game").mark_line().transform_fold(
+    return (points1415.transform_regression("mean_player_rating", "points_per_game").mark_line(width=1300,height=300).transform_fold(
         ["Regression line"], as_=["Regression", "y"]).encode(alt.Color("Regression:N"))
              + points1415.interactive()
              + pointLC1415.interactive()
@@ -452,6 +452,7 @@ def comparePointsChart(dataframe):
     text = line.mark_text(align='right', dx=-15, dy=-15).encode(
         text=alt.condition(nearest, 'value:Q', alt.value(' '))
     )
+
 
     chart = alt.layer(line, selectors, points, text).configure_axis(
         grid=False
@@ -664,13 +665,13 @@ def seasonEvo1415():
     layer = alt.layer(
         lineLC, line, selectors, points, pointsLC, rules, text1415, pointarrow, textarrow
     ).properties(
-        width=1200, height=300,
+        width=1100, height=300,
         title=''
     )
     layer2 = alt.layer(
         hist, text
     ).properties(
-        width=1200,
+        width=1120,
         height=300,
         title='Points at the selected Gameweek'
     )
