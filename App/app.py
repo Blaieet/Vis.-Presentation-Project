@@ -380,7 +380,7 @@ def outlierStory2015():
                                                                 color=alt.Color('team_name',
                                                                                 legend=alt.Legend(title="Team Name")),
                                                                 tooltip="team_name").properties(
-        title="Premier League, Season 2015/16"
+        title=""
     )
 
     pointLC1516 = alt.Chart(df_pointLC1516).mark_circle(size=120, opacity=1,
@@ -397,7 +397,7 @@ def outlierStory2015():
                                                                                                    title='Team'),
                                                                                        # alt.Tooltip("comment", title="Unexpected victory")
                                                                                        ]).properties(
-        title="Premier League, Season 2015/16")
+        title="")
 
     text1516 = alt.Chart({'values': [{'x': 73, 'y': 2}]}).mark_text(
         text='Here is our miracle winner, the Leicester City!'
@@ -460,11 +460,229 @@ def comparePointsChart(dataframe):
     ).configure_line(
         size=4
     ).configure_view(
-        stroke='').properties(width=700, height=300).interactive()
+        stroke='').properties(width=1300, height=300)
 
     return chart.to_json()
 
-# render cars.html page
+@app.route("/data/seasonEvolution1516")
+def seasonEvolution():
+    premier1516 = pd.read_csv('App/Data/premier1516.csv')
+    topteams1516 = ['Leicester City', 'Arsenal', 'Tottenham Hotspur', 'Manchester City', 'Chelsea']
+    noLC = ['Arsenal', 'Tottenham Hotspur', 'Manchester City', 'Chelsea']
+    LC = ['Leicester City']
+    premier1516noLC = premier1516[premier1516['team_long_name'].isin(noLC)]
+    premier1516LC = premier1516[premier1516['team_long_name'].isin(LC)]
+
+    a = {'x': [13, 23], 'y': [28, 47], 'textof': ['➟', '➟']}
+    arrow = pd.DataFrame(a)
+
+    pointarrow = alt.Chart(arrow).mark_circle(size=100, color='black').encode(
+        x='x',
+        y='y')
+
+    textarrow = alt.Chart(arrow).mark_text(dx=-20, dy=0, angle=45, fontSize=30).encode(
+        x='x',
+        y='y',
+        text='textof'
+    )
+    noLC = ['Chelsea', 'Manchester City', 'Arsenal', 'Queens Park Rangers', 'Burnley', 'Hull City']
+    LC = ['Leicester City']
+    palette = alt.Scale(domain=LC,
+                        range=['blue'])
+    nearest = alt.selection(type='single', nearest=True, on='mouseover',
+                            fields=['stage'], empty='none')
+
+    lineLC = alt.Chart(premier1516LC).mark_line(size=5).encode(
+        x=alt.X('stage', title='Gameweek', axis=alt.Axis(grid=False)),
+        y=alt.Y('cumpoints:Q', title='Points', axis=alt.Axis(grid=False)),
+        color=alt.Color('team_long_name:N', title='Team'),
+        tooltip='team_long_name:N'
+    )
+    line = alt.Chart(premier1516noLC).mark_line(size=2).encode(
+        x=alt.X('stage', title='Gameweek', axis=alt.Axis(grid=False)),
+        y=alt.Y('cumpoints:Q', title='Points', axis=alt.Axis(grid=False)),
+        color=alt.Color('team_long_name:N', title='Team'),
+        tooltip='team_long_name:N'
+    )
+
+    selectors = alt.Chart(premier1516).mark_point().encode(
+        x='stage',
+        opacity=alt.value(0),
+    ).add_selection(
+        nearest
+    )
+    points = line.mark_circle(size=80).encode(
+        opacity=alt.condition(nearest, alt.value(1), alt.value(0))
+    )
+    pointsLC = lineLC.mark_circle(size=100).encode(
+        opacity=alt.condition(nearest, alt.value(1), alt.value(0)),
+    )
+    rules = alt.Chart(premier1516).mark_rule(color='gray').encode(
+        x='stage',
+    ).transform_filter(
+        nearest
+    )
+    hist = alt.Chart(premier1516).mark_bar().encode(
+        x=alt.X('cumpoints:Q', scale=alt.Scale(domain=[0, 81]), title='Points'),
+        y=alt.Y('team_long_name:N', sort=alt.EncodingSortField("cumpoints", op="max", order='descending'),
+                title='Team'),
+        color=alt.Color('team_long_name:N', scale=alt.Scale(domain=topteams1516))
+    ).transform_filter(
+        nearest
+    )
+    text = hist.mark_text(
+        align='left',
+        baseline='middle',
+        dx=3,  # Nudges text to right so it doesn't appear on top of the bar
+        fontSize=14
+    ).encode(
+        text='cumpoints:Q'
+    )
+    text1516a = alt.Chart({'values': [{'x': 4, 'y': 40}]}).mark_text(
+        text='Leicester took the lead \n for the first time at Gameweek 13',
+        lineBreak='\n',
+        align='left',
+        fontSize=14
+        # , angle=346
+    ).encode(
+        x='x:Q', y='y:Q'
+    )
+    text1516b = alt.Chart({'values': [{'x': 11, 'y': 59}]}).mark_text(
+        text='At Gameweek 23 Leicester City took the lead\n once again and never looked back',
+        lineBreak='\n',
+        align='left',
+        fontSize=14
+        # , angle=346
+    ).encode(
+        x='x:Q', y='y:Q'
+    )
+    layer = alt.layer(
+        lineLC, line, selectors, points, pointsLC, rules, text1516a, text1516b, pointarrow, textarrow
+    ).properties(
+        width=1200, height=300,
+        title=''
+    )
+    layer2 = alt.layer(
+        hist, text
+    ).properties(
+        width=1200,
+        height=300,
+        title='Points at the selected Gameweek'
+    )
+    return alt.VConcatChart(vconcat=(layer, layer2), padding={"left": 100}).configure_title(fontSize=16).configure_axis(
+            labelFontSize=12,
+            titleFontSize=12
+        ).configure_legend(
+            labelFontSize=12,
+            titleFontSize=12
+        ).to_json()
+
+
+@app.route("/data/seasonEvolution1415")
+def seasonEvo1415():
+    premier1415 = pd.read_csv('App/Data/premier1415.csv')
+    topteams1415 = ['Leicester City', 'Chelsea', 'Manchester City', 'Arsenal', 'Hull City', 'Burnley',
+                    'Queens Park Rangers']
+    noLC = ['Chelsea', 'Manchester City', 'Arsenal', 'Hull City', 'Burnley', 'Queens Park Rangers']
+    LC = ['Leicester City']
+    premier1415noLC = premier1415[premier1415['team_long_name'].isin(noLC)]
+    premier1415LC = premier1415[premier1415['team_long_name'].isin(LC)]
+    a = {'x': [30], 'y': [19], 'textof': ['➟']}
+    arrow = pd.DataFrame(a)
+
+    pointarrow = alt.Chart(arrow).mark_circle(size=100, color='black').encode(
+        x='x',
+        y='y')
+
+    textarrow = alt.Chart(arrow).mark_text(dx=-20, dy=0, angle=240, fontSize=30).encode(
+        x='x',
+        y='y',
+        text='textof'
+    )
+    noLC = ['Chelsea', 'Manchester City', 'Arsenal', 'Queens Park Rangers', 'Burnley', 'Hull City']
+    LC = ['Leicester City']
+    palette = alt.Scale(domain=LC,
+                        range=['blue'])
+    nearest = alt.selection(type='single', nearest=True, on='mouseover',
+                            fields=['stage'], empty='none')
+
+    lineLC = alt.Chart(premier1415LC).mark_line(size=5).encode(
+        x=alt.X('stage', title='Gameweek', axis=alt.Axis(grid=False)),
+        y=alt.Y('cumpoints:Q', title='Points', axis=alt.Axis(grid=False)),
+        color=alt.Color('team_long_name:N', title='Team'),
+        tooltip='team_long_name:N'
+    )
+    line = alt.Chart(premier1415noLC).mark_line(size=2).encode(
+        x=alt.X('stage', title='Gameweek', axis=alt.Axis(grid=False)),
+        y=alt.Y('cumpoints:Q', title='Points', axis=alt.Axis(grid=False)),
+        color=alt.Color('team_long_name:N', title='Team'),
+        tooltip='team_long_name:N'
+    )
+
+    selectors = alt.Chart(premier1415).mark_point().encode(
+        x='stage',
+        opacity=alt.value(0),
+    ).add_selection(
+        nearest
+    )
+    points = line.mark_circle(size=80).encode(
+        opacity=alt.condition(nearest, alt.value(1), alt.value(0))
+    )
+    pointsLC = lineLC.mark_circle(size=100).encode(
+        opacity=alt.condition(nearest, alt.value(1), alt.value(0)),
+    )
+    rules = alt.Chart(premier1415).mark_rule(color='gray').encode(
+        x='stage',
+    ).transform_filter(
+        nearest
+    )
+    hist = alt.Chart(premier1415).mark_bar().encode(
+        x=alt.X('cumpoints:Q', scale=alt.Scale(domain=[0, 81]), title='Points'),
+        y=alt.Y('team_long_name:N', sort=alt.EncodingSortField("cumpoints", op="max", order='descending'),
+                title='Team'),
+        color=alt.Color('team_long_name:N', scale=alt.Scale(domain=topteams1415))
+    ).transform_filter(
+        nearest
+    )
+    text = hist.mark_text(
+        align='left',
+        baseline='middle',
+        dx=3,  # Nudges text to right so it doesn't appear on top of the bar
+        fontSize=14
+    ).encode(
+        text='cumpoints:Q'
+    )
+    text1415 = alt.Chart({'values': [{'x': 26, 'y': 10}]}).mark_text(
+        text='With only 8 games left, Leicester City\n was at the bottom of the table',
+        lineBreak='\n',
+        align='left',
+        fontSize=14
+        # , angle=346
+    ).encode(
+        x='x:Q', y='y:Q'
+    )
+    layer = alt.layer(
+        lineLC, line, selectors, points, pointsLC, rules, text1415, pointarrow, textarrow
+    ).properties(
+        width=1200, height=300,
+        title=''
+    )
+    layer2 = alt.layer(
+        hist, text
+    ).properties(
+        width=1200,
+        height=300,
+        title='Points at the selected Gameweek'
+    )
+    return alt.VConcatChart(vconcat=(layer, layer2), padding={"left": 120}).configure_title(fontSize=16).configure_axis(
+            labelFontSize=12,
+            titleFontSize=12
+        ).configure_legend(
+            labelFontSize=12,
+            titleFontSize=12
+        ).to_json()
+
+
 @app.route("/dashboard")
 def statistics():
     form = selectYear(request.form)

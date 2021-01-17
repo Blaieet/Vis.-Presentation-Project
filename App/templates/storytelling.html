@@ -37,10 +37,14 @@
         /* Section - Parallax */
         /**************************/
         #parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("static/images/BlurField.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
-        #parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1577223625816-7546f13df25d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+        #parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("static/images/Pasillo.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
         {##parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}#}
 
-        #parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://images.unsplash.com/photo-1440688807730-73e4e2169fb8?dpr=1&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+        #parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("static/images/botaBG.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+
+        #parallax-world-of-ugg .parallax-four {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url("static/images/LeicesterTrophy.jpg"); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+
+
 
         /* Extras */
         /**************************/
@@ -62,11 +66,12 @@
         }
 
         grid-container {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-auto-rows: 400px;
-            grid-auto-rows: 400px;
-          grid-gap: 10px;
+            display: grid;
+            {#grid-template-rows: repeat(auto-fit, minmax(100px,2fr));#}
+            grid-template-columns: repeat(auto-fit, minmax(100px,2fr));
+            grid-auto-rows: auto;
+            grid-auto-columns: auto;
+            grid-gap: 10px;
         }
 
         grid-item {
@@ -101,7 +106,7 @@
                 The best position Leicester got in all the Premier League history was second, and that happened in 1929. In fact, in the
                 previous season, they almost did not escape the relegation zone of the league. This is their story, in numbers.</p>
             <p class="line-break margin-top-10"></p>
-            <p class="margin-tot-10">The Leicester City F.C. was founded in 1884, earlier than Chelsea F.C., FC Barcelona or Real Meadrid CF. Nevertheless,
+            <p class="margin-tot-10">The Leicester City F.C. was founded in 1884, earlier than Chelsea F.C., FC Barcelona or Real Madrid CF. Nevertheless,
             till 7 years ago, it was not considered a top-ten football club, not even one of the best top twenty England teams. It was in 2014, when after 6 years of poor
             results in second division, they managed to climb the ladder promote to Premier League, the highest-level soccer league in England.</p>
           </div>
@@ -115,25 +120,25 @@
 
         <section>
           <div class="block">
-            <p><span class="first-character sc">E</span>ven though they almost win the play-offs for promotion in the 2011-12 season, the Leicester journey in the England second division, also
+            <p><span class="first-character sc">E</span>ven though they almost won the play-offs for promotion in the 2011-12 season, the Leicester journey in the England second division, also
                 known as English Football League, is quite mediocre and underwhelming. Therefore, their 2013-14 season run was a total upset for everyone, finishing first in the classification
                 with over 8 points from the second best, the "Burnley F.C."</p>
             <p class="line-break margin-top-10"></p>
             <p class="margin-top-10">The hype of the promotion to the Premier League ended quickly for the Foxes as they finished the season in 14th place with 41 points.
-                In fact, they did another "small" miracle run: they survived from the relegation after being at the bottom of the classification at Christmas. It's the only
+                In fact, they did a first "small" miracle run: they survived from relegation after being at the bottom of the classification at Christmas. It's the only
                 team in the England soccer history that managed to get less than 20 points from 29 matches and not get relegated. What an upturn!
             </p>
           </div>
         </section>
 
         <section>
-            <div class="parallax-one" style="text-align: center">
+            <div class="parallax-two" style="text-align: center">
                 <h2>Chart 2</h2>
                 <section>
-                    <div>
+                    <div style="">
                         <grid-container>
                             <grid-item>
-                                <div class="card" style="margin-top: 15%;">
+                                <div class="card" style="margin-top: 2%;">
                                     <h5 class="card-title">Leicester performance on the last 2 EFL Seasons</h5>
                                     <div id="EFL"></div><div class="vg-tooltip"></div>
                                     <div class="card-body" style="color: black">
@@ -141,12 +146,16 @@
                                     </div>
                                 </div>
                             </grid-item>
+                        </grid-container>
+                    </div>
+                    <div>
+                        <grid-container>
                             <grid-item>
-                                <div class="card" style="margin-top: 15%;">
+                                <div class="card" style="margin-top: 2%;">
                                     <h5 class="card-title">Leicester (14th) and Chelsea (1st) performances on the 2014-15 Premier League</h5>
                                     <div id="ChelseaLei"></div><div class="vg-tooltip"></div>
                                     <div class="card-body" style="color: black">
-                                        <p class="card-text">Chelsea smashed the Pe.</p>
+                                        <p class="card-text">Chelsea only dropped three games whilst Leicester managed to woke up after week 29th.</p>
                                     </div>
                                 </div>
                             </grid-item>
@@ -164,13 +173,29 @@
         </section>
 
         <section>
-            <div class="parallax-two" style="text-align: center">
+            <div class="parallax-three" style="text-align: center">
                 <h2>Chart 2</h2>
                 <section>
                     <div>
                         <grid-container>
-                            <grid-item><div id="outliesr"></div><div class="vg-tooltip"></div></grid-item>
-                            <grid-item><div id="outliser1516"></div><div class="vg-tooltip"></div></grid-item>
+                            <grid-item>
+                                <div class="card" style="margin-top: 2%;">
+                                    <h5 class="card-title">Team points & Mean player rating of the Season 2014-15 Premier League</h5>
+                                    <div id="outlier"></div><div class="vg-tooltip"></div>
+                                    <div class="card-body" style="color: black">
+                                        <p class="card-text">It looked like another mediocre season at first glance, but then the Foxes ramped up to first place.</p>
+                                    </div>
+                                </div>
+                            </grid-item>
+                            <grid-item>
+                                <div class="card" style="margin-top: 2%;">
+                                    <h5 class="card-title">Team points & Mean player rating of the Season 2015-16 Premier League</h5>
+                                    <div id="outlier1516"></div><div class="vg-tooltip"></div>
+                                    <div class="card-body" style="color: black">
+                                        <p class="card-text">It looked like another mediocre season at first glance, but then the Foxes ramped up to first place.</p>
+                                    </div>
+                                </div>
+                            </grid-item>
                         </grid-container>
                     </div>
                 </section>
@@ -185,9 +210,37 @@
         </section>
 
         <section>
-          <div class="parallax-three">
-            <h2>Chart 3</h2>
-          </div>
+            <div class="parallax-four" style="text-align: center">
+                <h2>Chart 3</h2>
+                <section>
+                    <div style="">
+                        <grid-container>
+                            <grid-item>
+                                <div class="card" style="margin-top: 2%;">
+                                    <h5 class="card-title">Top 3, bottom 3 and Leicester in the 2014/2015 PL season</h5>
+                                    <div id="evo1415"></div><div class="vg-tooltip"></div>
+                                    <div class="card-body" style="color: black">
+                                        <p class="card-text">It looked like another mediocre season at first glance, but then the Foxes ramped up to first place.</p>
+                                    </div>
+                                </div>
+                            </grid-item>
+                        </grid-container>
+                    </div>
+                    <div>
+                        <grid-container>
+                            <grid-item>
+                                <div class="card" style="margin-top: 2%;">
+                                    <h5 class="card-title">Top 4 and Chelsea in the 2015/2016 PL season</h5>
+                                    <div id="evo1516"></div><div class="vg-tooltip"></div>
+                                    <div class="card-body" style="color: black">
+                                        <p class="card-text">Chelsea only dropped three games whilst Leicester managed to woke up after week 29th.</p>
+                                    </div>
+                                </div>
+                            </grid-item>
+                        </grid-container>
+                    </div>
+                </section>
+            </div>
         </section>
 
         <section>
@@ -216,6 +269,8 @@
     render("/data/outlier1516","outlier1516");
     render("/data/comparePoints/EFL","EFL");
     render("/data/comparePoints/1415","ChelseaLei");
+    render("/data/seasonEvolution1415","evo1415");
+    render("/data/seasonEvolution1516","evo1516");
 
 
 
