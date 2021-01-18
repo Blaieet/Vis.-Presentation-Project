@@ -416,18 +416,19 @@ def outlierStory2015():
 
 @app.route("/data/comparePoints/<name>")
 def comparePoints(name):
-    if name == "EFL":
-        dataframe = pd.read_csv("App/Data/LeicesterEFL.csv")
-    elif name == "1415":
-        dataframe = pd.read_csv("App/Data/ChelseaLei.csv")
-    else:
-        pass
-    return comparePointsChart(dataframe)
+    # if name == "EFL":
+    #
+    # elif name == "1415":
+    #     # dataframe = pd.read_csv("App/Data/ChelseaLei.csv")
+    #
+    # else:
+    #     pass
+    dataframe = pd.read_csv("App/Data/LeicesterEFL.csv")
+    last = pd.read_csv("App/Data/LastEFL.csv")
+    return comparePointsChart(dataframe,last)
 
 
-def comparePointsChart(dataframe):
-
-    # flcc = pd.read_csv("App/Data/LeicesterEFL.csv")
+def comparePointsChart(dataframe,last):
 
     line = alt.Chart(dataframe).mark_line().encode(
         x=alt.X('Matches', title='Match'),
@@ -445,6 +446,13 @@ def comparePointsChart(dataframe):
         nearest
     )
 
+    labels = alt.Chart(last).mark_text(align='left', dx=3).encode(
+        alt.X('Matches'),
+        alt.Y('value:Q', scale=alt.Scale()),
+        alt.Text('variable'),
+        alt.Color('variable:N', legend=None, scale=alt.Scale())
+    )
+
     points = line.mark_point().encode(
         opacity=alt.condition(nearest, alt.value(1), alt.value(0))
     )
@@ -454,7 +462,7 @@ def comparePointsChart(dataframe):
     )
 
 
-    chart = alt.layer(line, selectors, points, text).configure_axis(
+    chart = alt.layer(line, selectors, points, text,points,labels).configure_axis(
         grid=False
     ).configure_point(
         size=100
@@ -539,7 +547,7 @@ def seasonEvolution():
     ).encode(
         text='cumpoints:Q'
     )
-    text1516a = alt.Chart({'values': [{'x': 4, 'y': 40}]}).mark_text(
+    text1516a = alt.Chart({'values': [{'x': 8.5, 'y': 44}]}).mark_text(
         text='Leicester took the lead \n for the first time at Gameweek 13',
         lineBreak='\n',
         align='left',
@@ -548,7 +556,7 @@ def seasonEvolution():
     ).encode(
         x='x:Q', y='y:Q'
     )
-    text1516b = alt.Chart({'values': [{'x': 11, 'y': 59}]}).mark_text(
+    text1516b = alt.Chart({'values': [{'x': 18, 'y': 62}]}).mark_text(
         text='At Gameweek 23 Leicester City took the lead\n once again and never looked back',
         lineBreak='\n',
         align='left',
@@ -653,7 +661,7 @@ def seasonEvo1415():
     ).encode(
         text='cumpoints:Q'
     )
-    text1415 = alt.Chart({'values': [{'x': 26, 'y': 10}]}).mark_text(
+    text1415 = alt.Chart({'values': [{'x': 26, 'y': 8}]}).mark_text(
         text='With only 8 games left, Leicester City\n was at the bottom of the table',
         lineBreak='\n',
         align='left',
