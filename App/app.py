@@ -309,9 +309,8 @@ def outlierStory():
     # outlier.rename(columns={"team_name": "Team Name"})
     df_pointLC1415 = pl1415[pl1415["team_api_id"] == 8197]
 
-    all_but_LC1415 = pl1415[pl1415["team_api_id"] != 8197]
 
-    points1415 = alt.Chart(all_but_LC1415,width=900,height=300).mark_circle(size=80, opacity=0.5  # , color='grey'
+    points1415 = alt.Chart(pl1415,width=900,height=300).mark_circle(size=80, opacity=0.5  # , color='grey'
                                                        ).encode(alt.X('mean_player_rating',
                                                                       scale=alt.Scale(zero=False),
                                                                       axis=alt.Axis(title='Team mean player rating')),
@@ -354,8 +353,8 @@ def outlierStory():
 
     return (points1415.transform_regression("mean_player_rating", "points_per_game").mark_line(width=1300,height=300).transform_fold(
         ["Regression line"], as_=["Regression", "y"]).encode(alt.Color("Regression:N"))
-             + points1415.interactive()
-             + pointLC1415.interactive()
+             + points1415
+             + pointLC1415
              + text1415a + text1415b).to_json()
 
 
@@ -364,13 +363,10 @@ def outlierStory2015():
     pl1516 = pd.read_csv("App/Data/2015-PremierLeague.csv")
 
     # outlier.rename(columns={"team_name": "Team Name"})
-    df_pointLC1516 = pl1516[pl1516["team_api_id"] == 8197]
+    df_pointLC1516 = pl1516[pl1516["team_api_id"]==8197].copy()
 
-    # df_pointLC["comment"] = "All odds were againts the LC, but it ended up winning the league. Good team play, or just luck?"
 
-    all_but_LC1516 = pl1516[pl1516["team_api_id"] != 8197]
-
-    points1516 = alt.Chart(all_but_LC1516,width=700,height=300).mark_circle(size=80, opacity=0.5  # , color='grey'
+    points1516 = alt.Chart(pl1516,width=700,height=300).mark_circle(size=80, opacity=0.5  # , color='grey'
                                                        ).encode(alt.X('mean_player_rating',
                                                                       scale=alt.Scale(zero=False),
                                                                       axis=alt.Axis(title='Team mean player rating')),
@@ -383,8 +379,9 @@ def outlierStory2015():
         title=""
     )
 
-    pointLC1516 = alt.Chart(df_pointLC1516).mark_circle(size=120, opacity=1,
-                                                        color='green').encode(alt.X('mean_player_rating',
+    df_pointLC1516["img"] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF2NwgOK1RecuMhq3AhK45rSfJZUsz7cJ5HA&usqp=CAU"
+
+    pointLC1516 = alt.Chart(df_pointLC1516).mark_image(width=25,height=25).encode(alt.X('mean_player_rating',
                                                                                     scale=alt.Scale(zero=False),
                                                                                     axis=alt.Axis(
                                                                                         title='Team mean player rating')),
@@ -396,11 +393,13 @@ def outlierStory2015():
                                                                               tooltip=[alt.Tooltip("team_name",
                                                                                                    title='Team'),
                                                                                        # alt.Tooltip("comment", title="Unexpected victory")
-                                                                                       ]).properties(
+                                                                                       ],url="img").properties(
         title="")
 
+
+
     text1516 = alt.Chart({'values': [{'x': 73, 'y': 2}]}).mark_text(
-        text='Here is our miracle winner, the Leicester City!'
+        text='Here is our miracle winner, Leicester City!'
         # , angle=346
     ).encode(
         x='x:Q', y='y:Q'
@@ -409,8 +408,8 @@ def outlierStory2015():
     # for regression to work, you have to add interaction to the final plot (not before regression)
     return (points1516.transform_regression("mean_player_rating", "points_per_game").mark_line().transform_fold(
         ["Regression line"], as_=["Regression", "y"]).encode(alt.Color("Regression:N"))
-             + points1516.interactive()
-             + pointLC1516.interactive()
+             + points1516
+             + pointLC1516
              + text1516).to_json()
 
 
