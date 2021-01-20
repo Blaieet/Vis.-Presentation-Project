@@ -498,11 +498,9 @@ def seasonEvolution():
         y='y',
         text='textof'
     )
-    noLC = ['Chelsea', 'Manchester City', 'Arsenal', 'Queens Park Rangers', 'Burnley', 'Hull City']
-    LC = ['Leicester City']
 
     nearest = alt.selection(type='single', nearest=True, on='mouseover',
-                            fields=['stage'], empty='none')
+                            fields=['stage'], init={'stage':20}, empty='none')
 
     lineLC = alt.Chart(premier1516LC).mark_line(size=5).encode(
         x=alt.X('stage', title='Gameweek', axis=alt.Axis(grid=False)),
@@ -519,7 +517,7 @@ def seasonEvolution():
 
     selectors = alt.Chart(premier1516).mark_point().encode(
         x='stage',
-        opacity=alt.value(0),
+        opacity=alt.value(0)
     ).add_selection(
         nearest
     )
@@ -655,7 +653,7 @@ def seasonEvo1415():
     LC = ['Leicester City']
 
     nearest = alt.selection(type='single', nearest=True, on='mouseover',
-                            fields=['stage'], empty='none')
+                            fields=['stage'],init={'stage':20}, empty='none')
 
     lineLC = alt.Chart(premier1415LC).mark_line(size=5).encode(
         x=alt.X('stage', title='Gameweek', axis=alt.Axis(grid=False)),
