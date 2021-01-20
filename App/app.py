@@ -487,7 +487,7 @@ def seasonEvolution():
     arrow = pd.DataFrame(a)
 
     palette = alt.Scale(domain=topteams1516,
-                        range=['#0062cc', '#F8D210', '#98D7C2', 'red', "green"])
+                        range=['#0062cc', 'red', 'yellow', '#6CABDD', "green"])
 
     pointarrow = alt.Chart(arrow).mark_circle(size=100, color='black').encode(
         x='x',
@@ -640,7 +640,7 @@ def seasonEvo1415():
     arrow = pd.DataFrame(a)
 
     palette = alt.Scale(domain=topteams1415,
-                        range=['#0062cc', 'green', '#17becf', 'red', '#663f3f', '#e1d89f', '#d89216'])
+                        range=['#0062cc', 'green', '#6CABDD', 'red', '#663f3f', '#e1d89f', '#d89216'])
 
     pointarrow = alt.Chart(arrow).mark_circle(size=100, color='black').encode(
         x='x',
