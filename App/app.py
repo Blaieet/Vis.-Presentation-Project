@@ -480,9 +480,20 @@ def seasonEvolution():
     LC = ['Leicester City']
     premier1516noLC = premier1516[premier1516['team_long_name'].isin(noLC)]
     premier1516LC = premier1516[premier1516['team_long_name'].isin(LC)]
+    premier1516mod = premier1516.copy()
+    premier1516mod['cumpoints'] = premier1516mod['cumpoints'] - premier1516mod['points']
+
+    noLClast = premier1516noLC[premier1516noLC['stage'] == 38]
+    LClast = premier1516LC[premier1516LC['stage'] == 38]
+    LClast['position'] = '1st'
+    noLClast['position'] = ['10th', '4th', '3rd', '2nd']
+    noLClast['labely'] = [50, 66, 70, 72]
 
     a = {'x': [13, 23], 'y': [28, 47], 'textof': ['➟', '➟']}
     arrow = pd.DataFrame(a)
+
+    palette = alt.Scale(domain=topteams1516,
+                        range=['#0062cc', '#F51720', '#98D7C2', '#17becf', '#F8D210'])
 
     pointarrow = alt.Chart(arrow).mark_circle(size=100, color='black').encode(
         x='x',
@@ -495,8 +506,7 @@ def seasonEvolution():
     )
     noLC = ['Chelsea', 'Manchester City', 'Arsenal', 'Queens Park Rangers', 'Burnley', 'Hull City']
     LC = ['Leicester City']
-    palette = alt.Scale(domain=LC,
-                        range=['blue'])
+
     nearest = alt.selection(type='single', nearest=True, on='mouseover',
                             fields=['stage'], empty='none')
 
@@ -522,6 +532,20 @@ def seasonEvolution():
     points = line.mark_circle(size=80).encode(
         opacity=alt.condition(nearest, alt.value(1), alt.value(0))
     )
+
+    labelsLC = alt.Chart(LClast).mark_text(align='left', dx=3, size=14).encode(
+        alt.X('stage', title='Gameweek', axis=alt.Axis(grid=False)),
+        alt.Y('cumpoints:Q', title='Points', axis=alt.Axis(grid=False)),
+        alt.Text('position'),
+        alt.Color('team_long_name:N', title='Team', scale=palette),
+    )
+    labels = alt.Chart(noLClast).mark_text(align='left', dx=3, size=12).encode(
+        alt.X('stage', title='Gameweek', axis=alt.Axis(grid=False)),
+        alt.Y('labely:Q', title='Points', axis=alt.Axis(grid=False)),
+        alt.Text('position'),
+        alt.Color('team_long_name:N', title='Team', scale=palette),
+    )
+
     pointsLC = lineLC.mark_circle(size=100).encode(
         opacity=alt.condition(nearest, alt.value(1), alt.value(0)),
     )
@@ -538,6 +562,20 @@ def seasonEvolution():
     ).transform_filter(
         nearest
     )
+
+    tick = alt.Chart(premier1516mod).mark_tick(
+        color='black',
+        thickness=2,
+        strokeDash=[1, 1],
+        size=60 * 0.9,  # controls width of tick.
+    ).encode(
+        x=alt.X('cumpoints:Q', scale=alt.Scale(domain=[0, 81]), title='Points'),
+        y=alt.Y('team_long_name:N', sort=alt.EncodingSortField("cumpoints", op="max", order='descending'),
+                title='Team'),
+    ).transform_filter(
+        nearest
+    )
+
     text = hist.mark_text(
         align='left',
         baseline='middle',
@@ -565,13 +603,13 @@ def seasonEvolution():
         x='x:Q', y='y:Q'
     )
     layer = alt.layer(
-        lineLC, line, selectors, points, pointsLC, rules, text1516a, text1516b, pointarrow, textarrow
+        lineLC, line, labelsLC, labels, selectors, points, pointsLC, rules, text1516a, text1516b, pointarrow, textarrow
     ).properties(
         width=1200, height=300,
         title=''
     )
     layer2 = alt.layer(
-        hist, text
+        hist, text,tick
     ).properties(
         width=1200,
         height=300,
@@ -589,14 +627,26 @@ def seasonEvolution():
 @app.route("/data/seasonEvolution1415")
 def seasonEvo1415():
     premier1415 = pd.read_csv('App/Data/premier1415.csv')
+    premier1415mod = premier1415.copy()
+    premier1415mod['cumpoints'] = premier1415mod['cumpoints'] - premier1415mod['points']
     topteams1415 = ['Leicester City', 'Chelsea', 'Manchester City', 'Arsenal', 'Hull City', 'Burnley',
                     'Queens Park Rangers']
     noLC = ['Chelsea', 'Manchester City', 'Arsenal', 'Hull City', 'Burnley', 'Queens Park Rangers']
     LC = ['Leicester City']
     premier1415noLC = premier1415[premier1415['team_long_name'].isin(noLC)]
     premier1415LC = premier1415[premier1415['team_long_name'].isin(LC)]
+
+    noLClast1415 = premier1415noLC[premier1415noLC['stage'] == 38]
+    LClast1415 = premier1415LC[premier1415LC['stage'] == 38]
+    LClast1415['position'] = '14th'
+    noLClast1415['position'] = ['19th', '1st', '2nd', '18th', '3rd', '20th']
+
+
     a = {'x': [30], 'y': [19], 'textof': ['➟']}
     arrow = pd.DataFrame(a)
+
+    palette = alt.Scale(domain=topteams1415,
+                        range=['#0062cc', 'green', '#17becf', 'red', '#663f3f', '#e1d89f', '#d89216'])
 
     pointarrow = alt.Chart(arrow).mark_circle(size=100, color='black').encode(
         x='x',
@@ -609,8 +659,7 @@ def seasonEvo1415():
     )
     noLC = ['Chelsea', 'Manchester City', 'Arsenal', 'Queens Park Rangers', 'Burnley', 'Hull City']
     LC = ['Leicester City']
-    palette = alt.Scale(domain=LC,
-                        range=['blue'])
+
     nearest = alt.selection(type='single', nearest=True, on='mouseover',
                             fields=['stage'], empty='none')
 
@@ -633,6 +682,20 @@ def seasonEvo1415():
     ).add_selection(
         nearest
     )
+
+    labelsLC = alt.Chart(LClast1415).mark_text(align='left', dx=3, size=14).encode(
+        alt.X('stage', title='Gameweek', axis=alt.Axis(grid=False)),
+        alt.Y('cumpoints:Q', title='Points', axis=alt.Axis(grid=False)),
+        alt.Text('position'),
+        alt.Color('team_long_name:N', title='Team', scale=palette),
+    )
+    labels = alt.Chart(noLClast1415).mark_text(align='left', dx=3, size=12).encode(
+        alt.X('stage', title='Gameweek', axis=alt.Axis(grid=False)),
+        alt.Y('cumpoints:Q', title='Points', axis=alt.Axis(grid=False)),
+        alt.Text('position'),
+        alt.Color('team_long_name:N', title='Team', scale=palette),
+    )
+
     points = line.mark_circle(size=80).encode(
         opacity=alt.condition(nearest, alt.value(1), alt.value(0))
     )
@@ -644,6 +707,20 @@ def seasonEvo1415():
     ).transform_filter(
         nearest
     )
+
+    tick = alt.Chart(premier1415mod).mark_tick(
+        color='black',
+        thickness=2,
+        strokeDash=[1, 1],
+        size=40 * 0.9,  # controls width of tick.
+    ).encode(
+        x=alt.X('cumpoints:Q', scale=alt.Scale(domain=[0, 81]), title='Points'),
+        y=alt.Y('team_long_name:N', sort=alt.EncodingSortField("cumpoints", op="max", order='descending'),
+                title='Team'),
+    ).transform_filter(
+        nearest
+    )
+
     hist = alt.Chart(premier1415).mark_bar().encode(
         x=alt.X('cumpoints:Q', scale=alt.Scale(domain=[0, 81]), title='Points'),
         y=alt.Y('team_long_name:N', sort=alt.EncodingSortField("cumpoints", op="max", order='descending'),
@@ -670,13 +747,13 @@ def seasonEvo1415():
         x='x:Q', y='y:Q'
     )
     layer = alt.layer(
-        lineLC, line, selectors, points, pointsLC, rules, text1415, pointarrow, textarrow
+        lineLC, line, labels, labelsLC, selectors, points, pointsLC, rules, text1415, pointarrow, textarrow
     ).properties(
         width=1100, height=300,
         title=''
     )
     layer2 = alt.layer(
-        hist, text
+        hist, text,tick
     ).properties(
         width=1120,
         height=300,
