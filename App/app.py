@@ -333,10 +333,7 @@ def outlierStory():
                                                                                   axis=alt.Axis(
                                                                                       title='Points per game')),
                                                                             # color=alt.Color('team_name'),
-                                                                            tooltip=[
-                                                                                alt.Tooltip("team_name", title='Team'),
-                                                                                # alt.Tooltip("comment", title="Unexpected victory")
-                                                                                ]).properties(title="")
+                                                                            tooltip="team_name").properties(title="")
     text1415a = alt.Chart({'values': [{'x': 71, 'y': 1.3}]}).mark_text(
         text='The Leicester finished 14th,'
         # , angle=346
@@ -390,10 +387,7 @@ def outlierStory2015():
                                                                                     axis=alt.Axis(
                                                                                         title='Points per game')),
                                                                               # color=alt.Color('team_name'),
-                                                                              tooltip=[alt.Tooltip("team_name",
-                                                                                                   title='Team'),
-                                                                                       # alt.Tooltip("comment", title="Unexpected victory")
-                                                                                       ],url="img").properties(
+                                                                              tooltip="team_name",url="img").properties(
         title="")
 
 
@@ -493,7 +487,7 @@ def seasonEvolution():
     arrow = pd.DataFrame(a)
 
     palette = alt.Scale(domain=topteams1516,
-                        range=['#0062cc', '#F51720', '#98D7C2', '#17becf', '#F8D210'])
+                        range=['#0062cc', '#F8D210', '#98D7C2', 'red', "green"])
 
     pointarrow = alt.Chart(arrow).mark_circle(size=100, color='black').encode(
         x='x',
