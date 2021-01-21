@@ -88,6 +88,8 @@ def bestTeamPlot(year,top):
         df_draw.append(draw)
     best = pd.DataFrame({'Team': teamList, 'Wins': df_won, 'Losts': df_lost, 'Draw': df_draw})
 
+    best.to_csv("best.csv",index=None)
+
     chart = alt.Chart(pd.melt(best, id_vars=['Team'], var_name='Result', value_name='Total'),height=400,width=165).mark_bar().encode(
         alt.X('Result:N', axis=alt.Axis(title="",labels=False)),
         alt.Y('Total:Q', axis=alt.Axis(title='Total', grid=False)),
@@ -487,7 +489,7 @@ def seasonEvolution():
     arrow = pd.DataFrame(a)
 
     palette = alt.Scale(domain=topteams1516,
-                        range=['#0062cc', 'red', 'yellow', '#6CABDD', "green"])
+                        range=['#0062cc', '#EF0107', 'yellow', '#6CABDD', "green"])
 
     pointarrow = alt.Chart(arrow).mark_circle(size=100, color='black').encode(
         x='x',
@@ -638,7 +640,7 @@ def seasonEvo1415():
     arrow = pd.DataFrame(a)
 
     palette = alt.Scale(domain=topteams1415,
-                        range=['#0062cc', 'green', '#6CABDD', 'red', '#663f3f', '#e1d89f', '#d89216'])
+                        range=['#0062cc', 'green', '#6CABDD', '#EF0107', '#663f3f', '#e1d89f', '#d89216'])
 
     pointarrow = alt.Chart(arrow).mark_circle(size=100, color='black').encode(
         x='x',
